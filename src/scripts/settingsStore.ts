@@ -121,6 +121,9 @@ export const settingsStore = createStore<SettingsState>(
 
         console.log("localIsDarkThemeSelected Not found");
       }
+
+
+      console.log("State", state);
     },
   },
 
