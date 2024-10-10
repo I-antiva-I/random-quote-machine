@@ -71,7 +71,7 @@
 
       const targetStyle = reactive({
         width: 'auto',
-        height: 'auto',
+        height: '100%',
         maxHeight: 'auto',
       });
 
