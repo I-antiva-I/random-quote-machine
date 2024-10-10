@@ -1,0 +1,604 @@
+{
+   "signs": [
+      {
+         "signIndex": 1,
+         "signImage": "antichamber_sign_001.jpg",
+         "signQuote": "Every journey is a series of choices. The first is to begin the journey."
+      },
+      {
+         "signIndex": 2,
+         "signImage": "antichamber_sign_002.jpg",
+         "signQuote": "Patience has its own rewards."
+      },
+      {
+         "signIndex": 3,
+         "signImage": "antichamber_sign_003.jpg",
+         "signQuote": "Taking the first step can be harder than the rest of the challenge."
+      },
+      {
+         "signIndex": 4,
+         "signImage": "antichamber_sign_004.jpg",
+         "signQuote": "Many small obstacles can make for one large problem."
+      },
+      {
+         "signIndex": 5,
+         "signImage": "antichamber_sign_005.jpg",
+         "signQuote": "Some choices leave us running around a lot without really getting anywhere."
+      },
+      {
+         "signIndex": 6,
+         "signImage": "antichamber_sign_006.jpg",
+         "signQuote": "Live on your own watch, not on someone else's."
+      },
+      {
+         "signIndex": 7,
+         "signImage": "antichamber_sign_007.jpg",
+         "signQuote": "Failing to succeed does not mean failing to progress."
+      },
+      {
+         "signIndex": 8,
+         "signImage": "antichamber_sign_008.jpg",
+         "signQuote": "Some paths are clearer than others."
+      },
+      {
+         "signIndex": 9,
+         "signImage": "antichamber_sign_009.jpg",
+         "signQuote": "Some paths are straight forward."
+      },
+      {
+         "signIndex": 10,
+         "signImage": "antichamber_sign_010.jpg",
+         "signQuote": "A choice may be as simple as going left or going right."
+      },
+      {
+         "signIndex": 11,
+         "signImage": "antichamber_sign_011.jpg",
+         "signQuote": "The choice doesn't matter if the outcome is the same."
+      },
+      {
+         "signIndex": 12,
+         "signImage": "antichamber_sign_012.jpg",
+         "signQuote": "If you don't like where you've ended up, try doing something else."
+      },
+      {
+         "signIndex": 13,
+         "signImage": "antichamber_sign_013.jpg",
+         "signQuote": "When you return to where you have been, things aren't always as remembered."
+      },
+      {
+         "signIndex": 14,
+         "signImage": "antichamber_sign_014.jpg",
+         "signQuote": "We fall down when there is nothing there to support us."
+      },
+      {
+         "signIndex": 15,
+         "signImage": "antichamber_sign_015.jpg",
+         "signQuote": "Building a bridge can get you over a problem."
+      },
+      {
+         "signIndex": 16,
+         "signImage": "antichamber_sign_016.jpg",
+         "signQuote": "Some hurdles are too high to jump over."
+      },
+      {
+         "signIndex": 17,
+         "signImage": "antichamber_sign_017.jpg",
+         "signQuote": "Life is full of ups and downs."
+      },
+      {
+         "signIndex": 18,
+         "signImage": "antichamber_sign_018.jpg",
+         "signQuote": "Connecting the pieces can solve a puzzle."
+      },
+      {
+         "signIndex": 19,
+         "signImage": "antichamber_sign_019.jpg",
+         "signQuote": "Life has a way of pushing us in the right direction."
+      },
+      {
+         "signIndex": 20,
+         "signImage": "antichamber_sign_020.jpg",
+         "signQuote": "The end may come before we were ready to get there."
+      },
+      {
+         "signIndex": 21,
+         "signImage": "antichamber_sign_021.jpg",
+         "signQuote": "Life isn't about getting to the end."
+      },
+      {
+         "signIndex": 22,
+         "signImage": "antichamber_sign_022.jpg",
+         "signQuote": "It's harder to progress if you're leaving things behind."
+      },
+      {
+         "signIndex": 23,
+         "signImage": "antichamber_sign_023.jpg",
+         "signQuote": "The further we get, the less help we need."
+      },
+      {
+         "signIndex": 24,
+         "signImage": "antichamber_sign_024.jpg",
+         "signQuote": "Moving forward may require making the most of what you've got."
+      },
+      {
+         "signIndex": 25,
+         "signImage": "antichamber_sign_025.jpg",
+         "signQuote": "Some tasks require a lot of care and observation."
+      },
+      {
+         "signIndex": 26,
+         "signImage": "antichamber_sign_026.jpg",
+         "signQuote": "Taking one path often means missing out on another."
+      },
+      {
+         "signIndex": 27,
+         "signImage": "antichamber_sign_027.jpg",
+         "signQuote": "A path may not be right or wrong. It may just be different."
+      },
+      {
+         "signIndex": 28,
+         "signImage": "antichamber_sign_028.jpg",
+         "signQuote": "Look a little harder, and you will find a way forward."
+      },
+      {
+         "signIndex": 29,
+         "signImage": "antichamber_sign_029.jpg",
+         "signQuote": "Venturing into the unknown can lead to great rewards."
+      },
+      {
+         "signIndex": 30,
+         "signImage": "antichamber_sign_030.jpg",
+         "signQuote": "If you're only focusing on right now, you won't have enough for later."
+      },
+      {
+         "signIndex": 31,
+         "signImage": "antichamber_sign_031.jpg",
+         "signQuote": "A dead end will only stop you if you don't try to move through it."
+      },
+      {
+         "signIndex": 32,
+         "signImage": "antichamber_sign_032.jpg",
+         "signQuote": "Going a certain way may require building your own path."
+      },
+      {
+         "signIndex": 33,
+         "signImage": "antichamber_sign_033.jpg",
+         "signQuote": "There's nothing wrong with taking shortcuts."
+      },
+      {
+         "signIndex": 34,
+         "signImage": "antichamber_sign_034.jpg",
+         "signQuote": "We often fall into things when we least expect."
+      },
+      {
+         "signIndex": 35,
+         "signImage": "antichamber_sign_035.jpg",
+         "signQuote": "What looks out of reach may only be a few steps away."
+      },
+      {
+         "signIndex": 36,
+         "signImage": "antichamber_sign_036.jpg",
+         "signQuote": "There are multiple ways to approach a situation."
+      },
+      {
+         "signIndex": 37,
+         "signImage": "antichamber_sign_037.jpg",
+         "signQuote": "When you've hit rock bottom, the only way is up."
+      },
+      {
+         "signIndex": 38,
+         "signImage": "antichamber_sign_038.jpg",
+         "signQuote": "Some outcomes are more favorable than others."
+      },
+      {
+         "signIndex": 39,
+         "signImage": "antichamber_sign_039.jpg",
+         "signQuote": "How we perceive a problem can change every time we see it."
+      },
+      {
+         "signIndex": 40,
+         "signImage": "antichamber_sign_040.jpg",
+         "signQuote": "The solution to a problem may just require a more thorough look at it."
+      },
+      {
+         "signIndex": 41,
+         "signImage": "antichamber_sign_041.jpg",
+         "signQuote": "Rushing through a problem won't always give the right results."
+      },
+      {
+         "signIndex": 42,
+         "signImage": "antichamber_sign_042.jpg",
+         "signQuote": "Moving through a problem slower may help find the solution."
+      },
+      {
+         "signIndex": 43,
+         "signImage": "antichamber_sign_043.jpg",
+         "signQuote": "If you never stop trying, you will get there eventually."
+      },
+      {
+         "signIndex": 44,
+         "signImage": "antichamber_sign_044.jpg",
+         "signQuote": "Raw persistence may be the only option other than giving up entirely."
+      },
+      {
+         "signIndex": 45,
+         "signImage": "antichamber_sign_045.jpg",
+         "signQuote": "Some problems just come down to size."
+      },
+      {
+         "signIndex": 46,
+         "signImage": "antichamber_sign_046.jpg",
+         "signQuote": "A problem may only be difficult when you are missing the right tools."
+      },
+      {
+         "signIndex": 47,
+         "signImage": "antichamber_sign_047.jpg",
+         "signQuote": "What we've done before may impact what we can do next."
+      },
+      {
+         "signIndex": 48,
+         "signImage": "antichamber_sign_048.jpg",
+         "signQuote": "If you aren't paying attention, you will miss everything around you."
+      },
+      {
+         "signIndex": 49,
+         "signImage": "antichamber_sign_049.jpg",
+         "signQuote": "Some choices can leave us running around in circles."
+      },
+      {
+         "signIndex": 50,
+         "signImage": "antichamber_sign_050.jpg",
+         "signQuote": "Splitting a problem up may help you find the answer."
+      },
+      {
+         "signIndex": 51,
+         "signImage": "antichamber_sign_051.jpg",
+         "signQuote": "What appears impossible may have a very simple answer."
+      },
+      {
+         "signIndex": 52,
+         "signImage": "antichamber_sign_052.jpg",
+         "signQuote": "If you lose sight of what's important, it may not be there when you need it."
+      },
+      {
+         "signIndex": 53,
+         "signImage": "antichamber_sign_053.jpg",
+         "signQuote": "Too much curiosity can get the best of us."
+      },
+      {
+         "signIndex": 54,
+         "signImage": "antichamber_sign_054.jpg",
+         "signQuote": "Signs may be helping you more than you realize."
+      },
+      {
+         "signIndex": 55,
+         "signImage": "antichamber_sign_055.jpg",
+         "signQuote": "Understanding a problem requires filling in the pieces."
+      },
+      {
+         "signIndex": 56,
+         "signImage": "antichamber_sign_056.jpg",
+         "signQuote": "Small steps can take you great distances."
+      },
+      {
+         "signIndex": 57,
+         "signImage": "antichamber_sign_057.jpg",
+         "signQuote": "The path of least resistance is a valid option."
+      },
+      {
+         "signIndex": 58,
+         "signImage": "antichamber_sign_058.jpg",
+         "signQuote": "No matter how high you climb, there's always more to achieve."
+      },
+      {
+         "signIndex": 59,
+         "signImage": "antichamber_sign_059.jpg",
+         "signQuote": "Falling down teaches us how to get up and try again."
+      },
+      {
+         "signIndex": 60,
+         "signImage": "antichamber_sign_060.jpg",
+         "signQuote": "The world rarely changes when we watch to see it happen."
+      },
+      {
+         "signIndex": 61,
+         "signImage": "antichamber_sign_061.jpg",
+         "signQuote": "Half way through is half way finished."
+      },
+      {
+         "signIndex": 62,
+         "signImage": "antichamber_sign_062.jpg",
+         "signQuote": "The problem may not be where you're going, but how to get there."
+      },
+      {
+         "signIndex": 63,
+         "signImage": "antichamber_sign_063.jpg",
+         "signQuote": "New skills enable further progress."
+      },
+      {
+         "signIndex": 64,
+         "signImage": "antichamber_sign_064.jpg",
+         "signQuote": "Mastering a skill requires practice."
+      },
+      {
+         "signIndex": 65,
+         "signImage": "antichamber_sign_065.jpg",
+         "signQuote": "A little kind direction can get obstacles out of your way."
+      },
+      {
+         "signIndex": 66,
+         "signImage": "antichamber_sign_066.jpg",
+         "signQuote": "Solving a problem may require approaching it from a different angle."
+      },
+      {
+         "signIndex": 67,
+         "signImage": "antichamber_sign_067.jpg",
+         "signQuote": "Try hard enough and you will get to where you want to be."
+      },
+      {
+         "signIndex": 68,
+         "signImage": "antichamber_sign_068.jpg",
+         "signQuote": "Some doors will close unless we hold them open."
+      },
+      {
+         "signIndex": 69,
+         "signImage": "antichamber_sign_069.jpg",
+         "signQuote": "When you absorb your surroundings, you may notice things that you didn't see before."
+      },
+      {
+         "signIndex": 70,
+         "signImage": "antichamber_sign_070.jpg",
+         "signQuote": "Dig a little deeper and you may find something new."
+      },
+      {
+         "signIndex": 71,
+         "signImage": "antichamber_sign_071.jpg",
+         "signQuote": "Attention to detail can lead to very rewarding outcomes."
+      },
+      {
+         "signIndex": 72,
+         "signImage": "antichamber_sign_072.jpg",
+         "signQuote": "Solving a problem may require using abilities that we didn't realize we had."
+      },
+      {
+         "signIndex": 73,
+         "signImage": "antichamber_sign_073.jpg",
+         "signQuote": "Old skills are useful even after we have learned new ones."
+      },
+      {
+         "signIndex": 74,
+         "signImage": "antichamber_sign_074.jpg",
+         "signQuote": "The right answers may also be the most obvious ones."
+      },
+      {
+         "signIndex": 75,
+         "signImage": "antichamber_sign_075.jpg",
+         "signQuote": "Some obstacles are more stubborn than others."
+      },
+      {
+         "signIndex": 76,
+         "signImage": "antichamber_sign_076.jpg",
+         "signQuote": "Some things don't have a deeper meaning."
+      },
+      {
+         "signIndex": 77,
+         "signImage": "antichamber_sign_077.jpg",
+         "signQuote": "The right decisions at the right time will get you where you want to go."
+      },
+      {
+         "signIndex": 78,
+         "signImage": "antichamber_sign_078.jpg",
+         "signQuote": "Some choices are only useful when we make them early."
+      },
+      {
+         "signIndex": 79,
+         "signImage": "antichamber_sign_079.jpg",
+         "signQuote": "With forethought, things have a way of just working themselves out."
+      },
+      {
+         "signIndex": 80,
+         "signImage": "antichamber_sign_080.jpg",
+         "signQuote": "Some challenges are far harder than they first appear."
+      },
+      {
+         "signIndex": 81,
+         "signImage": "antichamber_sign_081.jpg",
+         "signQuote": "To get past a problem, you may just need to keep pushing through it."
+      },
+      {
+         "signIndex": 82,
+         "signImage": "antichamber_sign_082.jpg",
+         "signQuote": "Getting to a solution requires cutting out what doesn't work."
+      },
+      {
+         "signIndex": 83,
+         "signImage": "antichamber_sign_083.jpg",
+         "signQuote": "The further we explore, the more connected everything becomes."
+      },
+      {
+         "signIndex": 84,
+         "signImage": "antichamber_sign_084.jpg",
+         "signQuote": "A window of opportunity can lead to new places if you are willing to take a closer look."
+      },
+      {
+         "signIndex": 85,
+         "signImage": "antichamber_sign_085.jpg",
+         "signQuote": "The world looks different on the other side."
+      },
+      {
+         "signIndex": 86,
+         "signImage": "antichamber_sign_086.jpg",
+         "signQuote": "When you have enough resources, you can start growing more."
+      },
+      {
+         "signIndex": 87,
+         "signImage": "antichamber_sign_087.jpg",
+         "signQuote": "You can grow a garden anywhere."
+      },
+      {
+         "signIndex": 88,
+         "signImage": "antichamber_sign_088.jpg",
+         "signQuote": "The best solutions may still be the most primitive ones."
+      },
+      {
+         "signIndex": 89,
+         "signImage": "antichamber_sign_089.jpg",
+         "signQuote": "If you lead the way, others will follow."
+      },
+      {
+         "signIndex": 90,
+         "signImage": "antichamber_sign_090.jpg",
+         "signQuote": "Straightforward problems can often require roundabout solutions."
+      },
+      {
+         "signIndex": 91,
+         "signImage": "antichamber_sign_091.jpg",
+         "signQuote": "If you are missing information, it's easy to be misled."
+      },
+      {
+         "signIndex": 92,
+         "signImage": "antichamber_sign_092.jpg",
+         "signQuote": "When you look beyond the surface, there may be more to find."
+      },
+      {
+         "signIndex": 93,
+         "signImage": "antichamber_sign_093.jpg",
+         "signQuote": "Sometimes we only have just enough to get by."
+      },
+      {
+         "signIndex": 94,
+         "signImage": "antichamber_sign_094.jpg",
+         "signQuote": "When what you have is not enough, find ways to turn it into more."
+      },
+      {
+         "signIndex": 95,
+         "signImage": "antichamber_sign_095.jpg",
+         "signQuote": "Getting where we want may require jumping through some hoops."
+      },
+      {
+         "signIndex": 96,
+         "signImage": "antichamber_sign_096.jpg",
+         "signQuote": "Throwing yourself into things can take you to new heights."
+      },
+      {
+         "signIndex": 97,
+         "signImage": "antichamber_sign_097.jpg",
+         "signQuote": "Similar problems can have entirely different solutions."
+      },
+      {
+         "signIndex": 98,
+         "signImage": "antichamber_sign_098.jpg",
+         "signQuote": "Some events happen whether we want them to or not."
+      },
+      {
+         "signIndex": 99,
+         "signImage": "antichamber_sign_099.jpg",
+         "signQuote": "Old solutions can apply to new problems."
+      },
+      {
+         "signIndex": 100,
+         "signImage": "antichamber_sign_100.jpg",
+         "signQuote": "The consequences of one choice can cut us off from making others."
+      },
+      {
+         "signIndex": 101,
+         "signImage": "antichamber_sign_101.jpg",
+         "signQuote": "At times we need to view the world from someone else's perspective."
+      },
+      {
+         "signIndex": 102,
+         "signImage": "antichamber_sign_102.jpg",
+         "signQuote": "Sometimes you need to be carried."
+      },
+      {
+         "signIndex": 103,
+         "signImage": "antichamber_sign_103.jpg",
+         "signQuote": "There comes a time when you can work your way through anything."
+      },
+      {
+         "signIndex": 104,
+         "signImage": "antichamber_sign_104.jpg",
+         "signQuote": "With more experience, previous challenges aren't so difficult."
+      },
+      {
+         "signIndex": 105,
+         "signImage": "antichamber_sign_105.jpg",
+         "signQuote": "There's no need to take apart what already works."
+      },
+      {
+         "signIndex": 106,
+         "signImage": "antichamber_sign_106.jpg",
+         "signQuote": "A few steps backwards may keep you moving forwards."
+      },
+      {
+         "signIndex": 107,
+         "signImage": "antichamber_sign_107.jpg",
+         "signQuote": "Obscure problems may require unusual solutions."
+      },
+      {
+         "signIndex": 108,
+         "signImage": "antichamber_sign_108.jpg",
+         "signQuote": "Getting to the end requires tying off the loose ends."
+      },
+      {
+         "signIndex": 109,
+         "signImage": "antichamber_sign_109.jpg",
+         "signQuote": "The world is always finding new ways to surprise us."
+      },
+      {
+         "signIndex": 110,
+         "signImage": "antichamber_sign_110.jpg",
+         "signQuote": "Sometimes we do things just to go along for the ride."
+      },
+      {
+         "signIndex": 111,
+         "signImage": "antichamber_sign_111.jpg",
+         "signQuote": "The more we complete, the harder it gets to find what we missed."
+      },
+      {
+         "signIndex": 112,
+         "signImage": "antichamber_sign_112.jpg",
+         "signQuote": "Some challenges exist just to test how much we know."
+      },
+      {
+         "signIndex": 113,
+         "signImage": "antichamber_sign_113.jpg",
+         "signQuote": "You can't do everything yourself."
+      },
+      {
+         "signIndex": 114,
+         "signImage": "antichamber_sign_114.jpg",
+         "signQuote": "The world is full of secrets waiting to be uncovered."
+      },
+      {
+         "signIndex": 115,
+         "signImage": "antichamber_sign_115.jpg",
+         "signQuote": "Peeking behind the curtains lets us see how everything works."
+      },
+      {
+         "signIndex": 116,
+         "signImage": "antichamber_sign_116.jpg",
+         "signQuote": "Some problems can't be solved until you're more experienced."
+      },
+      {
+         "signIndex": 117,
+         "signImage": "antichamber_sign_117.jpg",
+         "signQuote": "We move on when there is nothing left to learn."
+      },
+      {
+         "signIndex": 118,
+         "signImage": "antichamber_sign_118.jpg",
+         "signQuote": "Complicated problems are easier when solved one step at a time."
+      },
+      {
+         "signIndex": 119,
+         "signImage": "antichamber_sign_119.jpg",
+         "signQuote": "We can appreciate the entire journey by looking back at how far we have come."
+      },
+      {
+         "signIndex": 120,
+         "signImage": "antichamber_sign_120.jpg",
+         "signQuote": "Every journey comes to an end."
+      }
+   ]
+}
