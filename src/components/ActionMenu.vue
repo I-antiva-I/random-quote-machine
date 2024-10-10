@@ -11,12 +11,12 @@
       <div class="action-button__text">Settings</div>
     </button>
 
-    <button v-show="isRandomizeButtonVisible" class="action-button" v-on:click="onRandomizeButtonClicked">
+    <button v-show="isRandomizeButtonVisible" class="action-button" v-on:click="onRandomizeButtonClicked" id="new-quote">
       <IconSVG :icon="diceIcon" />
-      <div class="action-button__text">Randomize</div>
+      <div class="action-button__text" >Randomize</div>
     </button>
 
-    <button class="action-button" v-on:click="onShareButtonClicked">
+    <button class="action-button" v-on:click="onShareButtonClicked" id="tweet-quote">
       <IconSVG :icon="Icon.SHARE" />
       <div class="action-button__text">Share</div>
     </button>
