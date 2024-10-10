@@ -32,6 +32,7 @@ export default defineComponent({
   },
   setup(props) 
     {
+        console.log("ABOUT SETUP");
         return {
           IconSVG,
           Icon
