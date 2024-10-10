@@ -1,0 +1,58 @@
+/* #region Colors */
+
+// whitesmoke #F5F5F5
+
+$color--elevation-level-0: #121212;
+$color--elevation-level-1: #212121;
+$color--elevation-level-2: #343434;
+$color--elevation-level-3: #424242;
+$color--elevation-level-4: #545454;
+$color--elevation-level-5: #696969;
+$color--elevation-level-6: #808080;
+$color--elevation-level-7: #A9A9A9;
+$color--elevation-level-8: #C0C0C0;
+$color--elevation-level-9: #DCDCDC;
+
+$color--font-default: #F5F5F5; 
+$color--font-default-alt: #121212;
+
+/* #endregion Colors */
+
+/* #region Fonts */
+
+// (?) The font property is a shorthand property for:
+//      > font-style 
+//      > font-variant
+//      > font-weight
+//      > font-size/line-height 
+//      > font-family
+//      
+//      required: font-size and font-family
+// ==================================================
+
+// Sign
+$font--sign-header: normal normal 3rem / 1 "Rubik Mono One", monospace;
+$font--sign-clock-time: normal bold 2rem / 1 "Titillium Web", sans-serif;
+$font--sign-clock-period: normal bold 1rem / 1 "Titillium Web", sans-serif;
+$font--sign-quote: normal bold 2rem / 1.25 "Titillium Web", sans-serif;
+
+// Settings
+$font--control-element-default: normal bold 1.25rem / 1 "Titillium Web", sans-serif;
+$font--control-element-icon-button: normal bold 1.5rem / 1 "Titillium Web", sans-serif;
+
+// Action menu
+$font--action-menu-default: normal normal 1rem / 1 "Titillium Web", sans-serif;
+
+/* #endregion Fonts */
+
+/* #region Sizes */
+
+$size--image-max-width: 350px;
+
+/* #endregion Sizes */
+
+/* #region Shadows */
+
+$shadow--text-default: 0px 2px 4px rgba(0, 0, 0, 0.5); 
+
+/* #endregion Shadows */

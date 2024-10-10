@@ -1,0 +1,76 @@
+@use "variables.scss";
+@use "mixins.scss";
+@use "fonts.scss";
+
+.action-menu
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    gap: 8px;
+}
+
+.action-button
+{
+    display: block;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background: variables.$color--elevation-level-2;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+}
+
+.action-button--hidden
+{
+    display: none;
+}
+
+
+
+.action-button .svg-icon
+{
+    --color--interactive-default: #{variables.$color--font-default};
+    --color--interactive-hovered: #{variables.$color--elevation-level-5};
+    --color--interactive-pressed: mediumseagreen;
+
+    svg
+    {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.action-button__text
+{
+    display: none; /* Hide the text initially */
+    position: absolute;
+    top: calc(100% + 0.5rem); /* Adjust this value to position the text below the image */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 4px;
+
+    white-space: nowrap;
+
+    background: variables.$color--elevation-level-6;
+    padding: 4px 8px;
+
+    font: variables.$font--action-menu-default;
+}
+
+.action-button:hover .action-button__text 
+{
+    display: block;
+}

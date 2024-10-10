@@ -1,0 +1,321 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+// "Hide" default checkbox/radio button
+.checkbox,
+.radio-button,
+.toggle-switch
+{
+  &__input
+  {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+  }
+}
+
+
+.checkbox,
+.radio-button,
+.toggle-switch
+{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    &__content
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        flex-grow: 1;
+        gap: 8px;
+
+        cursor: pointer;
+    }
+
+    &__icon 
+    {
+        background: black;
+        padding: 4px;
+    }
+    
+    &__text
+    {
+        user-select: none;
+        font: variables.$font--control-element-default;
+        text-align: left;
+    }
+
+    svg 
+    {
+        width: 24px;
+        height: 24px;
+        display: block;
+    }
+
+}
+
+.checkbox
+{
+    &__icon
+    {
+        border-radius: 4px;
+    }
+}
+
+.radio-button
+{
+    &__icon
+    {
+        border-radius: 100%;
+    }
+}
+
+.toggle-switch
+{
+
+    --color--interactive-default: whitesmoke;
+    --color--interactive-hovered: variables.$color--elevation-level-1;
+    --color--interactive-pressed: variables.$color--elevation-level-1;
+
+    &__icon
+    {
+        border: 2px solid variables.$color--elevation-level-5;
+        border-radius: 4px;
+        padding: 4px;
+
+        background: dodgerblue;
+
+        width: 64px;
+        height: 32px;
+
+        box-sizing: content-box;
+    }
+
+
+    .svg-icon
+    {
+       
+       // border: 1px solid white;
+        padding: 4px;
+        border-radius: 4px;
+
+        background: variables.$color--elevation-level-3;
+
+        width: 32px;
+        height: 32px;
+        
+        transition: margin-left 500ms ease-in-out;
+    }
+
+    &:hover
+    {
+        .toggle-switch__icon
+        {
+            border: 2px solid variables.$color--font-default;
+        }
+
+        .svg-icon
+        {
+             background: whitesmoke;
+        }
+    
+    }
+
+    &:hover:active
+    {
+        .toggle-switch__icon
+        {
+            border: 2px solid mediumspringgreen;
+        }
+
+    }
+
+}
+
+// States (checked/unchecked) and (on/off)
+.checkbox,
+.radio-button
+{
+    &--checked 
+    {   
+        --color--interactive-default: whitesmoke;
+        --color--interactive-hovered: whitesmoke;
+        --color--interactive-pressed: dodgerblue;
+
+        .checkbox__icon,
+        .radio-button__icon
+        {
+            background: dodgerblue;
+            border: 2px solid dodgerblue;
+        }
+
+        &:hover
+        {
+            .checkbox__icon,
+            .radio-button__icon
+            {
+              //  background: variables.$color--elevation-level-5;
+                border: 2px solid variables.$color--font-default;
+            }    
+        }
+
+        &:hover:active
+        {
+            .checkbox__icon,
+            .radio-button__icon
+            {
+               // background: mediumspringgreen;
+                border: 2px solid mediumseagreen;
+            }    
+        }
+    }
+
+    &--unchecked 
+    {
+        --color--interactive-default: #{variables.$color--elevation-level-3};
+        --color--interactive-hovered: #{variables.$color--elevation-level-5};
+        --color--interactive-pressed: mediumseagreen;
+
+        .checkbox__icon,
+        .radio-button__icon
+        {
+            background: variables.$color--elevation-level-3;
+            border: 2px solid variables.$color--elevation-level-5;
+        }
+
+        &:hover
+        {
+            .checkbox__icon,
+            .radio-button__icon
+            {
+                background: variables.$color--elevation-level-5;
+                border: 2px solid variables.$color--font-default;
+            }    
+        }
+
+        &:hover:active
+        {
+            .checkbox__icon,
+            .radio-button__icon
+            {
+                background: variables.$color--elevation-level-4;
+                border: 2px solid mediumseagreen;
+            }    
+        }
+    }
+}
+
+.toggle-switch
+{
+    &--on 
+    {
+        .toggle-switch__icon
+        {
+         
+        }
+
+        .svg-icon
+        {
+            margin-left: 0px;
+        }
+    }
+
+    &--off 
+    {
+        .toggle-switch__icon
+        {
+           // background: dodgerblue;
+
+        }
+
+        .svg-icon
+        {
+            margin-left: 32px;
+        }
+    }
+}
+
+/* #region IconButton */
+
+.icon-button
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    border-radius: 8px;
+    overflow: hidden;
+    border: none;
+
+    
+    cursor: pointer;
+
+    --color--interactive-default: #{variables.$color--font-default};
+    --color--interactive-hovered: #{variables.$color--font-default};
+    --color--interactive-pressed: #{variables.$color--font-default};
+
+    background: variables.$color--elevation-level-4;
+
+
+    &__icon
+    {
+        background: variables.$color--elevation-level-1;
+        padding: 8px;
+
+        svg 
+        {
+            width: 32px;
+            height: 32px;
+            display: block;
+        }
+    }
+    
+
+    &__text
+    {
+        user-select: none;
+        font: variables.$font--control-element-icon-button;
+        text-align: left;
+        color: variables.$color--font-default;
+
+       // background: red;
+        padding-left: 8px;
+        flex-grow: 1;
+    }
+
+    &:hover
+    {
+        background: variables.$color--font-default;
+        .icon-button__icon
+        {
+            background: dodgerblue;
+        }
+        .icon-button__text
+        {
+            color: variables.$color--font-default-alt;
+        }
+    }
+
+    &:hover:active
+    {
+        background: variables.$color--font-default;
+        .icon-button__icon
+        {
+            background: mediumseagreen;
+        }
+        .icon-button__text
+        {
+            color: variables.$color--font-default-alt;
+        }
+    }
+
+}
+
+/* #endregion */

@@ -1,0 +1,146 @@
+// Indexing starts with 1
+@function nth-char($string, $index) 
+{
+    @return str-slice($string, $index, $index);
+}
+
+
+@mixin border($color: red, $size: 2px, $type: solid, $borders: "1111")
+{
+    border: $size $type $color;
+
+    @if nth-char($borders, 1) != "1"
+    {
+        border-top: none 
+    }
+
+    @if nth-char($borders, 2) != "1"
+    {
+        border-right: none 
+    }
+
+    @if nth-char($borders, 3) != "1"
+    {
+        border-bottom: none 
+    }
+
+    @if nth-char($borders, 4) != "1"
+    {
+        border-left: none 
+    }
+}
+
+@mixin border-corners($color: red, $size: 2px, $width: 20, $height: 20, $base-color: transparent, $base-w: 200, $base-h: 200,)
+{
+    @include border($color, $size);
+
+    $stop-margin: 0.001;
+
+    $stop-hor-left:     calc($width / $base-w);
+    $stop-hor-right:    1 - calc($width / $base-w);
+    $stop-ver-left:     calc($height / $base-h);
+    $stop-ver-right:    1 - calc($height / $base-h);
+
+    border-bottom: $size solid 
+    linear-gradient(x1\: 0, y1\: 0, x2\: 1 , y2\: 0,
+       stop\: 0.000     $color,
+       stop\: $stop-hor-left - $stop-margin         $color, 
+       stop\: $stop-hor-left                        $base-color, 
+       stop\: $stop-hor-right                       $base-color,   
+       stop\: $stop-hor-right + $stop-margin        $color
+       stop\: 1.000     $color);
+
+    border-top: $size solid 
+    linear-gradient(x1\: 0, y1\: 0, x2\: 1 , y2\: 0,
+       stop\: 0.000     $color,
+       stop\: $stop-hor-left - $stop-margin         $color, 
+       stop\: $stop-hor-left                        $base-color, 
+       stop\: $stop-hor-right                       $base-color,   
+       stop\: $stop-hor-right + $stop-margin        $color
+       stop\: 1.000     $color);
+
+    border-left: $size solid 
+    linear-gradient(x1\: 0, y1\: 0, x2\: 0 , y2\: 1,
+       stop\: 0.000     $color,
+       stop\: $stop-ver-left - $stop-margin         $color, 
+       stop\: $stop-ver-left                        $base-color, 
+       stop\: $stop-ver-right                       $base-color,   
+       stop\: $stop-ver-right + $stop-margin        $color
+       stop\: 1.000     $color);
+
+    border-right: $size solid 
+    linear-gradient(x1\: 0, y1\: 0, x2\: 0 , y2\: 1,
+        stop\: 0.000     $color,
+        stop\: $stop-ver-left - $stop-margin         $color, 
+        stop\: $stop-ver-left                        $base-color, 
+        stop\: $stop-ver-right                       $base-color,   
+        stop\: $stop-ver-right + $stop-margin        $color
+        stop\: 1.000     $color);
+
+
+}
+
+@mixin svg-icon__size($width, $height: none)
+{ 
+  svg
+  {
+    @if $height == none
+    {
+      width: $width;
+      height: $width;
+    }
+    @else
+    {
+      width: $width;
+      height: $height;
+    }
+  }
+}
+
+@mixin svg-icon__colors($color-default: none, $color-hovered: none, $color-pressed: none)
+{
+  &--default
+  {
+    svg
+    {
+      @if $color-default == none
+      {
+        fill: var(--color--interactive-default);
+      }
+      @else
+      {
+        fill: $color-default;
+      }
+    }
+  }
+
+  &--hovered
+  {
+    svg
+    {
+      @if $color-hovered == none
+      {
+        fill: var(--color--interactive-hovered);
+      }
+      @else
+      {
+        fill: $color-hovered;
+      }
+    }
+  }
+
+  &--pressed
+  {
+    svg
+    {
+      @if $color-pressed == none
+      {
+        fill: var(--color--interactive-pressed);
+      }
+      @else
+      {
+        fill: $color-pressed;
+      }
+    }
+  }
+}

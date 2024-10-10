@@ -1,0 +1,118 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+/* #region Settings */
+
+.settings
+{
+    background: variables.$color--elevation-level-2;
+
+    border-radius: 8px;
+    overflow: hidden; 
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch; 
+
+    &__header
+    {
+        h1
+        {
+            font-family: "Titillium Web", sans-serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        margin-bottom: 24px;
+    }
+
+    &__content
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch; 
+
+        overflow-y: scroll;
+        gap: 24px;
+        padding-right: 16px;
+
+    }
+}
+
+/* #endregion Settings */
+
+/* #region Settings Group */
+
+.settings-group
+{
+    &__header
+    {
+        h2
+        {
+            font-family: "Titillium Web", sans-serif;
+            font-size: 1.75rem;
+            font-weight: bold;
+            line-height: 1;
+            text-transform: uppercase;
+            text-align: left;
+        }
+        margin-bottom: 16px;
+    }
+
+    &__content
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch; 
+        gap: 16px;
+        //padding: 8px;
+    }
+
+    &--information
+    {
+        .settings-group__content
+        {
+            gap: 8px;    
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.settings-sub-group
+{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch; 
+
+    &__header
+    {
+        h3
+        {
+            font-family: "Titillium Web", sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            line-height: 1;
+            text-transform: capitalize;
+            text-align: left;   
+        }
+        margin-bottom: 8px;
+    }
+
+    &__content
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch; 
+        gap: 8px;
+    }
+}
+
+/* #endregion Settings Group */

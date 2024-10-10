@@ -1,0 +1,210 @@
+@use "variables.scss";
+@use "mixins.scss";
+
+
+
+
+
+.sign
+{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch; 
+   
+    border-radius: 8px;
+    overflow: hidden;
+
+    background-color: variables.$color--elevation-level-1;
+    color: variables.$color--font-default;
+
+
+    //transition: min-height 1s ease;
+    height: auto;
+    //min-width: 600px;
+   // max-width: 600px;
+  //  min-width: 325px;
+   // max-height: 750px;
+   max-width: 325px;
+
+    &__header
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; 
+
+        background-color: variables.$color--elevation-level-4;
+
+   
+        font: variables.$font--sign-header;
+        padding: 16px;
+        
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+
+    
+    }
+    
+    &__button
+    {
+      background: none;
+      border: none;
+
+      .svg-icon
+      {
+        @include mixins.svg-icon-interactive-colors();
+      }
+
+      svg
+      {
+        width: 48px;
+        height: 48px;  
+      }
+    }
+
+    &__index
+    {
+        text-align: center;
+        margin: 0 auto;
+        user-select: none; 
+    }
+
+    &__timer
+    {
+        background-color: variables.$color--elevation-level-2;
+
+        text-align: center;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+        
+        .clock
+        {
+            display: flex;
+            flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            
+            padding: 8px;
+            gap: 16px;
+
+ 
+            .clock__time
+            {
+                text-align: center;
+
+                font: variables.$font--sign-clock-time;
+                padding: 0.25rem 0;
+            }
+
+            .clock__placeholder,
+            .clock__period
+            {
+   
+                font: variables.$font--sign-clock-period;
+                border-radius: 8px;
+
+                display: flex;
+                flex-direction: row; /* Stack the elements vertically */
+                justify-content: center;
+                align-items: center;
+
+                flex: 1;
+
+                padding: 0.5rem  16px ;
+                
+
+            }
+
+            .clock__period
+            {
+                background: black;
+            }
+        }
+    }
+    
+    &__image
+    {
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+
+    
+      // padding: 4px;
+
+      /*
+        background-image: radial-gradient( black 90.5%,
+         variables.$color--elevation-level-4 91% , variables.$color--elevation-level-4);
+
+         background-image: radial-gradient( white 90.5%,
+         variables.$color--elevation-level-4 91% , variables.$color--elevation-level-4);
+
+         background-image: radial-gradient( dodgerblue 90.5%,
+         variables.$color--elevation-level-4 91% , variables.$color--elevation-level-4);
+
+         background-image: radial-gradient( black 90.5%,
+         white 91% , white);
+         */
+         background: black
+    }
+    
+    .image-frame
+    {
+ 
+       // width: 100%; 
+        height: auto;
+        position: absolute;
+        display: none;
+
+      
+
+      //  background-image: radial-gradient(  variables.$color--elevation-level-3 90.5%,
+       // variables.$color--elevation-level-4 91% , variables.$color--elevation-level-4);
+
+       // background-image: radial-gradient( transparent 90.5%,
+       // variables.$color--elevation-level-4 91% , variables.$color--elevation-level-4);
+    }
+
+    #image
+    { 
+       // padding: 8px;
+
+   
+       // border-radius: 16px;
+        overflow: hidden;
+       // max-width: 256px;
+        //max-height: 256px;
+        
+
+        width: 100%; 
+        height: auto;
+
+        max-width: 325px;
+        max-height: 325px;
+
+       // filter: invert(1);
+       //mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+        //display: none;
+    }
+
+    &__quote
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+
+
+
+        padding: 1rem 1rem;
+
+        font: variables.$font--sign-quote;
+
+        background-color: variables.$color--elevation-level-2;
+
+        text-align: center;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+
+
+    }
+}
