@@ -1,0 +1,208 @@
+/* #region Colors */
+/* #endregion Colors */
+/* #region Fonts */
+/* #endregion Fonts */
+/* #region Sizes */
+/* #endregion Sizes */
+/* #region Shadows */
+/* #endregion Shadows */
+.checkbox__input,
+.radio-button__input,
+.toggle-switch__input {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+}
+
+.checkbox,
+.radio-button,
+.toggle-switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.checkbox__content,
+.radio-button__content,
+.toggle-switch__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+  gap: 8px;
+  cursor: pointer;
+}
+.checkbox__icon,
+.radio-button__icon,
+.toggle-switch__icon {
+  background: black;
+  padding: 4px;
+}
+.checkbox__text,
+.radio-button__text,
+.toggle-switch__text {
+  user-select: none;
+  font: normal bold 1.25rem/1 "Titillium Web", sans-serif;
+  text-align: left;
+}
+.checkbox svg,
+.radio-button svg,
+.toggle-switch svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.checkbox__icon {
+  border-radius: 4px;
+}
+
+.radio-button__icon {
+  border-radius: 100%;
+}
+
+.toggle-switch {
+  --color--interactive-default: whitesmoke;
+  --color--interactive-hovered: variables.$color--elevation-level-1;
+  --color--interactive-pressed: variables.$color--elevation-level-1;
+}
+.toggle-switch__icon {
+  border: 2px solid #696969;
+  border-radius: 4px;
+  padding: 4px;
+  background: dodgerblue;
+  width: 64px;
+  height: 32px;
+  box-sizing: content-box;
+}
+.toggle-switch .svg-icon {
+  padding: 4px;
+  border-radius: 4px;
+  background: #424242;
+  width: 32px;
+  height: 32px;
+  transition: margin-left 500ms ease-in-out;
+}
+.toggle-switch:hover .toggle-switch__icon {
+  border: 2px solid #F5F5F5;
+}
+.toggle-switch:hover .svg-icon {
+  background: whitesmoke;
+}
+.toggle-switch:hover:active .toggle-switch__icon {
+  border: 2px solid mediumspringgreen;
+}
+
+.checkbox--checked,
+.radio-button--checked {
+  --color--interactive-default: whitesmoke;
+  --color--interactive-hovered: whitesmoke;
+  --color--interactive-pressed: dodgerblue;
+}
+.checkbox--checked .checkbox__icon,
+.checkbox--checked .radio-button__icon,
+.radio-button--checked .checkbox__icon,
+.radio-button--checked .radio-button__icon {
+  background: dodgerblue;
+  border: 2px solid dodgerblue;
+}
+.checkbox--checked:hover .checkbox__icon,
+.checkbox--checked:hover .radio-button__icon,
+.radio-button--checked:hover .checkbox__icon,
+.radio-button--checked:hover .radio-button__icon {
+  border: 2px solid #F5F5F5;
+}
+.checkbox--checked:hover:active .checkbox__icon,
+.checkbox--checked:hover:active .radio-button__icon,
+.radio-button--checked:hover:active .checkbox__icon,
+.radio-button--checked:hover:active .radio-button__icon {
+  border: 2px solid mediumseagreen;
+}
+.checkbox--unchecked,
+.radio-button--unchecked {
+  --color--interactive-default: #424242;
+  --color--interactive-hovered: #696969;
+  --color--interactive-pressed: mediumseagreen;
+}
+.checkbox--unchecked .checkbox__icon,
+.checkbox--unchecked .radio-button__icon,
+.radio-button--unchecked .checkbox__icon,
+.radio-button--unchecked .radio-button__icon {
+  background: #424242;
+  border: 2px solid #696969;
+}
+.checkbox--unchecked:hover .checkbox__icon,
+.checkbox--unchecked:hover .radio-button__icon,
+.radio-button--unchecked:hover .checkbox__icon,
+.radio-button--unchecked:hover .radio-button__icon {
+  background: #696969;
+  border: 2px solid #F5F5F5;
+}
+.checkbox--unchecked:hover:active .checkbox__icon,
+.checkbox--unchecked:hover:active .radio-button__icon,
+.radio-button--unchecked:hover:active .checkbox__icon,
+.radio-button--unchecked:hover:active .radio-button__icon {
+  background: #545454;
+  border: 2px solid mediumseagreen;
+}
+
+.toggle-switch--on .svg-icon {
+  margin-left: 0px;
+}
+.toggle-switch--off .svg-icon {
+  margin-left: 32px;
+}
+
+/* #region IconButton */
+.icon-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  --color--interactive-default: #F5F5F5;
+  --color--interactive-hovered: #F5F5F5;
+  --color--interactive-pressed: #F5F5F5;
+  background: #545454;
+}
+.icon-button__icon {
+  background: #212121;
+  padding: 8px;
+}
+.icon-button__icon svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+.icon-button__text {
+  user-select: none;
+  font: normal bold 1.5rem/1 "Titillium Web", sans-serif;
+  text-align: left;
+  color: #F5F5F5;
+  padding-left: 8px;
+  flex-grow: 1;
+}
+.icon-button:hover {
+  background: #F5F5F5;
+}
+.icon-button:hover .icon-button__icon {
+  background: dodgerblue;
+}
+.icon-button:hover .icon-button__text {
+  color: #121212;
+}
+.icon-button:hover:active {
+  background: #F5F5F5;
+}
+.icon-button:hover:active .icon-button__icon {
+  background: mediumseagreen;
+}
+.icon-button:hover:active .icon-button__text {
+  color: #121212;
+}
+
+/* #endregion *//*# sourceMappingURL=controls.css.map */

@@ -1,0 +1,63 @@
+/* #region Colors */
+/* #endregion Colors */
+/* #region Fonts */
+/* #endregion Fonts */
+/* #region Sizes */
+/* #endregion Sizes */
+/* #region Shadows */
+/* #endregion Shadows */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #121212;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card__wrapper {
+  position: relative;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
+  align-items: flex-start;
+}
+
+.card--back-visible .card__wrapper {
+  transform: rotateY(180deg); /* Flip the card :hover */
+}
+
+.card-side {
+  backface-visibility: hidden; /* Hide the back face when facing away */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.settings {
+  transition: max-height 0.5s ease;
+}
+
+.card-side {
+  transition: max-height 0.5s ease, height 0.5s ease;
+}
+
+.card-side--back {
+  position: absolute;
+  transform: rotateY(180deg);
+}/*# sourceMappingURL=home_view.css.map */

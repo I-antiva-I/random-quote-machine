@@ -1,0 +1,96 @@
+/* #region Colors */
+/* #endregion Colors */
+/* #region Fonts */
+/* #endregion Fonts */
+/* #region Sizes */
+/* #endregion Sizes */
+/* #region Shadows */
+/* #endregion Shadows */
+@font-face {
+  font-family: "Rubik Mono One";
+  src: url("@/assets/fonts/rubik_mono_one/RubikMonoOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("@/assets/fonts/titillium_web/TitilliumWeb-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("@/assets/fonts/titillium_web/TitilliumWeb-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+#CSSViewer_block * {
+  color: black;
+}
+
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  pointer-events: all;
+  color: whitesmoke;
+}
+
+#app {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  --color--interactive-default: red
+  --color--interactive-hovered: green;
+  --color--interactive-pressed: blue;
+}
+
+svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.svg-icon {
+  line-height: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.svg-icon--default svg {
+  fill: var(--color--interactive-default);
+}
+.svg-icon--hovered svg {
+  fill: var(--color--interactive-hovered);
+}
+.svg-icon--pressed svg {
+  fill: var(--color--interactive-pressed);
+}
+
+/* #region Scrollbar */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #212121;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #545454;
+}
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #545454 #212121;
+}
+
+/* #endregion Scrollbar *//*# sourceMappingURL=app.css.map */
