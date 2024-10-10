@@ -1,17 +1,14 @@
 /* #region Colors */
 
-// whitesmoke #F5F5F5
-
-$color--elevation-level-0: #121212;
-$color--elevation-level-1: #212121;
-$color--elevation-level-2: #343434;
-$color--elevation-level-3: #424242;
-$color--elevation-level-4: #545454;
-$color--elevation-level-5: #696969;
-$color--elevation-level-6: #808080;
-$color--elevation-level-7: #A9A9A9;
-$color--elevation-level-8: #C0C0C0;
-$color--elevation-level-9: #DCDCDC;
+$color--elevation-level-0: #000000;
+$color--elevation-level-1: #121212;
+$color--elevation-level-2: #222222;
+$color--elevation-level-3: #323232;
+$color--elevation-level-4: #424242;
+$color--elevation-level-5: #525252;
+$color--elevation-level-6: #626262;
+$color--elevation-level-7: #727272;
+$color--elevation-level-max: #F5F5F5;
 
 $color--font-default: #F5F5F5; 
 $color--font-default-alt: #121212;
@@ -47,7 +44,9 @@ $font--action-menu-default: normal normal 1rem / 1 "Titillium Web", sans-serif;
 
 /* #region Sizes */
 
-$size--image-max-width: 350px;
+$size--sign-max-width-mobile:   325px;
+$size--sign-max-width-desktop:  500px;
+
 
 /* #endregion Sizes */
 

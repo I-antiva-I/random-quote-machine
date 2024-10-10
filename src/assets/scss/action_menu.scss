@@ -11,6 +11,14 @@
     gap: 8px;
 }
 
+.action-menu
+{
+ position: fixed; 
+ top: 1rem;
+ right: 1rem;
+
+}
+
 .action-button
 {
     display: block;
@@ -36,8 +44,6 @@
     display: none;
 }
 
-
-
 .action-button .svg-icon
 {
     --color--interactive-default: #{variables.$color--font-default};
@@ -57,6 +63,8 @@
     position: absolute;
     top: calc(100% + 0.5rem); /* Adjust this value to position the text below the image */
     left: 50%;
+
+
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.7);
     color: white;

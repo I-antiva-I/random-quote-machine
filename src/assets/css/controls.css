@@ -68,7 +68,7 @@
   --color--interactive-pressed: variables.$color--elevation-level-1;
 }
 .toggle-switch__icon {
-  border: 2px solid #696969;
+  border: 2px solid #525252;
   border-radius: 4px;
   padding: 4px;
   background: dodgerblue;
@@ -79,7 +79,7 @@
 .toggle-switch .svg-icon {
   padding: 4px;
   border-radius: 4px;
-  background: #424242;
+  background: #323232;
   width: 32px;
   height: 32px;
   transition: margin-left 500ms ease-in-out;
@@ -121,29 +121,29 @@
 }
 .checkbox--unchecked,
 .radio-button--unchecked {
-  --color--interactive-default: #424242;
-  --color--interactive-hovered: #696969;
+  --color--interactive-default: #323232;
+  --color--interactive-hovered: #525252;
   --color--interactive-pressed: mediumseagreen;
 }
 .checkbox--unchecked .checkbox__icon,
 .checkbox--unchecked .radio-button__icon,
 .radio-button--unchecked .checkbox__icon,
 .radio-button--unchecked .radio-button__icon {
-  background: #424242;
-  border: 2px solid #696969;
+  background: #323232;
+  border: 2px solid #525252;
 }
 .checkbox--unchecked:hover .checkbox__icon,
 .checkbox--unchecked:hover .radio-button__icon,
 .radio-button--unchecked:hover .checkbox__icon,
 .radio-button--unchecked:hover .radio-button__icon {
-  background: #696969;
+  background: #525252;
   border: 2px solid #F5F5F5;
 }
 .checkbox--unchecked:hover:active .checkbox__icon,
 .checkbox--unchecked:hover:active .radio-button__icon,
 .radio-button--unchecked:hover:active .checkbox__icon,
 .radio-button--unchecked:hover:active .radio-button__icon {
-  background: #545454;
+  background: #424242;
   border: 2px solid mediumseagreen;
 }
 
@@ -167,10 +167,10 @@
   --color--interactive-default: #F5F5F5;
   --color--interactive-hovered: #F5F5F5;
   --color--interactive-pressed: #F5F5F5;
-  background: #545454;
+  background: #424242;
 }
 .icon-button__icon {
-  background: #212121;
+  background: #121212;
   padding: 8px;
 }
 .icon-button__icon svg {

@@ -13,17 +13,17 @@
   align-items: stretch;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #212121;
+  background-color: #121212;
   color: #F5F5F5;
   height: auto;
-  max-width: 325px;
+  max-width: 500px;
 }
 .sign__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #545454;
+  background-color: #424242;
   font: normal normal 3rem/1 "Rubik Mono One", monospace;
   padding: 16px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -33,13 +33,13 @@
   border: none;
 }
 .sign__button .svg-icon--default svg {
-  fill: var(--color--interactive-default);
+  fill: #FFFFFF;
 }
 .sign__button .svg-icon--hovered svg {
-  fill: var(--color--interactive-hovered);
+  fill: #1E90FF;
 }
 .sign__button .svg-icon--pressed svg {
-  fill: var(--color--interactive-pressed);
+  fill: #FFFFFF;
 }
 .sign__button svg {
   width: 48px;
@@ -51,7 +51,7 @@
   user-select: none;
 }
 .sign__timer {
-  background-color: #343434;
+  background-color: #222222;
   text-align: center;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -118,9 +118,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 8rem;
   padding: 1rem 1rem;
   font: normal bold 2rem/1.25 "Titillium Web", sans-serif;
-  background-color: #343434;
+  background-color: #222222;
   text-align: center;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }/*# sourceMappingURL=sign.css.map */

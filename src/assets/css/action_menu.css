@@ -32,6 +32,12 @@
   gap: 8px;
 }
 
+.action-menu {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
 .action-button {
   display: block;
   position: relative;
@@ -39,7 +45,7 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  background: #343434;
+  background: #222222;
   width: 48px;
   height: 48px;
   display: flex;
@@ -54,7 +60,7 @@
 
 .action-button .svg-icon {
   --color--interactive-default: #F5F5F5;
-  --color--interactive-hovered: #696969;
+  --color--interactive-hovered: #525252;
   --color--interactive-pressed: mediumseagreen;
 }
 .action-button .svg-icon svg {
@@ -72,7 +78,7 @@
   color: white;
   border-radius: 4px;
   white-space: nowrap;
-  background: #808080;
+  background: #626262;
   padding: 4px 8px;
   font: normal normal 1rem/1 "Titillium Web", sans-serif;
 }

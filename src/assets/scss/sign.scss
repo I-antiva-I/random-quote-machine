@@ -1,10 +1,6 @@
 @use "variables.scss";
 @use "mixins.scss";
 
-
-
-
-
 .sign
 {
 
@@ -26,7 +22,7 @@
    // max-width: 600px;
   //  min-width: 325px;
    // max-height: 750px;
-   max-width: 325px;
+   max-width: 500px;
 
     &__header
     {
@@ -53,7 +49,7 @@
 
       .svg-icon
       {
-        @include mixins.svg-icon-interactive-colors();
+        @include mixins.svg-icon__colors(#FFFFFF, #1E90FF, #FFFFFF);
       }
 
       svg
@@ -194,7 +190,7 @@
         justify-content: center;
         align-items: center; 
 
-
+        min-height: 8rem;
 
         padding: 1rem 1rem;
 

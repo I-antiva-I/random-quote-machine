@@ -60,20 +60,11 @@ svg {
   justify-content: center;
   align-items: center;
 }
-.svg-icon--default svg {
-  fill: var(--color--interactive-default);
-}
-.svg-icon--hovered svg {
-  fill: var(--color--interactive-hovered);
-}
-.svg-icon--pressed svg {
-  fill: var(--color--interactive-pressed);
-}
 
 /* #region Scrollbar */
 ::-webkit-scrollbar-track {
   border-radius: 10px;
-  background-color: #212121;
+  background-color: #121212;
   overflow: hidden;
 }
 
@@ -85,12 +76,12 @@ svg {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #545454;
+  background-color: #424242;
 }
 
 * {
   scrollbar-width: auto;
-  scrollbar-color: #545454 #212121;
+  scrollbar-color: #424242 #121212;
 }
 
 /* #endregion Scrollbar *//*# sourceMappingURL=app.css.map */

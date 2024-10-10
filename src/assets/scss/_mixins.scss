@@ -97,20 +97,13 @@
   }
 }
 
-@mixin svg-icon__colors($color-default: none, $color-hovered: none, $color-pressed: none)
+@mixin svg-icon__colors($color-default: var(--color--interactive-default), $color-hovered: none, $color-pressed: none)
 {
   &--default
   {
     svg
     {
-      @if $color-default == none
-      {
-        fill: var(--color--interactive-default);
-      }
-      @else
-      {
-        fill: $color-default;
-      }
+      fill: $color-default;
     }
   }
 
