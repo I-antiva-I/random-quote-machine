@@ -1,30 +1,27 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view/>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+  @import "/src/assets/css/app.css";
 </style>
+
+
+<script lang="ts">
+  import { defineComponent } from 'vue';
+  import type { SettingsState, SettingsStore } from './scripts/settingsStore';
+  import { SettingsActions } from './scripts/settingsStore';
+  import { useStore } from 'vuex';
+
+  export default defineComponent({
+    name: 'App',
+
+    // Prepare store
+    beforeCreate() 
+    {
+      const store: SettingsStore = useStore<SettingsState>();
+      store.dispatch(SettingsActions.initializeStore);
+    },
+
+  });
+</script>
