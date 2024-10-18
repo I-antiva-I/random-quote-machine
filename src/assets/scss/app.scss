@@ -2,14 +2,6 @@
 @use "mixins.scss";
 @use "fonts.scss";
 
-#CSSViewer_block
-{
-  *
-  {
-    color: black;
-  }
-}
-
 *, *::after, *::before
 {
   
@@ -18,23 +10,37 @@
   box-sizing: border-box;
   pointer-events: all;
 
-  color: whitesmoke;
 }
 
-#app
+body
 {
-  width: 100%;
- // height: 100%;  
+  min-height: 100vh;
 
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center; 
-
-  --color--interactive-default: red
-  --color--interactive-hovered: green;
-  --color--interactive-pressed: blue;
+  align-items: stretch; 
 }
+#root
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch; 
+}
+.app
+{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center; 
+  background: var(--color--app-background);
+  color: var(--color--font-default);
+}
+
+
+
+
 
 svg
 {
@@ -83,3 +89,160 @@ svg
 }
 
 /* #endregion Scrollbar */
+
+
+/* #region Themes */
+
+.app.theme--dark
+{
+    // Font
+    --color--font-default: #{variables.$color--font-light};
+    --color--font-default-alt: #{variables.$color--font-dark};
+
+    // Card
+    --color--app-background: #{variables.$color--elevation-level-1};
+    --color--card-background-high: #{variables.$color--elevation-level-3};
+    --color--card-background-low: #{variables.$color--elevation-level-2};
+    --color--card-backround-image: #{variables.$color--elevation-level-0};
+
+    // Background of Checkboxes and RadioButtons
+    --color--setting-background-unchecked-default: #{variables.$color--elevation-level-1}; 
+    --color--setting-background-unchecked-hovered: #{variables.$color--accent-blue-lighter};
+    --color--setting-background-unchecked-pressed: #{variables.$color--accent-blue-darker};
+    --color--setting-background-checked-default: #{variables.$color--accent-blue-lighter};
+    --color--setting-background-checked-hovered: #{variables.$color--elevation-level-1};
+    --color--setting-background-checked-pressed: #{variables.$color--elevation-level-1};
+    // Icon of Checkboxes and RadioButtons
+    --color--setting-icon-unchecked: #{variables.$color--elevation-level-1}; 
+    --color--setting-icon-unchecked-hovered: #{variables.$color--accent-blue-lighter};
+    --color--setting-icon-unchecked-pressed: #{variables.$color--accent-blue-darker};
+    --color--setting-icon-checked-default: #{variables.$color--elevation-level-f};
+    --color--setting-icon-checked-hovered: #{variables.$color--elevation-level-f};
+    --color--setting-icon-checked-pressed: #{variables.$color--elevation-level-4};
+    // Border of Checkboxes and RadioButtons
+    --color--setting-border-unchecked-default: #{variables.$color--elevation-level-4}; 
+    --color--setting-border-unchecked-hovered: #{variables.$color--elevation-level-f};
+    --color--setting-border-unchecked-pressed: #{variables.$color--elevation-level-b};;
+    --color--setting-border-checked-default: #{variables.$color--elevation-level-f};
+    --color--setting-border-checked-hovered: #{variables.$color--elevation-level-f};
+    --color--setting-border-checked-pressed: #{variables.$color--elevation-level-4};
+
+
+    // Backgrounds of action menu buttons
+    --color--action-button-background-default: #{variables.$color--elevation-level-f};
+    --color--action-button-background-hovered: #{variables.$color--accent-blue-lighter};
+    --color--action-button-background-pressed: #{variables.$color--accent-blue-darker};
+    // Icons of action menu buttons
+    --color--action-button-icon-default: #{variables.$color--elevation-level-1};
+    --color--action-button-icon-hovered: #{variables.$color--elevation-level-f};
+    --color--action-button-icon-pressed: #{variables.$color--elevation-level-b};
+
+    // Icon of ToggleButton
+    --color--toggle-button-icon-default: #{variables.$color--elevation-level-f};
+    --color--toggle-button-icon-hovered: #{variables.$color--accent-blue-lighter};
+    --color--toggle-button-icon-pressed: #{variables.$color--accent-blue-darker};
+    // Foreground (button) of ToggleButton
+    --color--toggle-button-foreground-default: #{variables.$color--elevation-level-2};
+    --color--toggle-button-foreground-hovered: #{variables.$color--elevation-level-f};
+    --color--toggle-button-foreground-pressed: #{variables.$color--elevation-level-b};
+    // Background of ToggleButton
+    --color--toggle-button-background-default: #{variables.$color--elevation-level-1};
+    --color--toggle-button-background-hovered: #{variables.$color--accent-blue-lighter};
+    --color--toggle-button-background-pressed: #{variables.$color--accent-blue-darker};
+
+    // Icon of IconButton
+    --color--icon-button-icon-default: #{variables.$color--elevation-level-f};
+    --color--icon-button-icon-hovered: #{variables.$color--elevation-level-f};
+    --color--icon-button-icon-pressed: #{variables.$color--elevation-level-b};
+    // Background of IconButton
+    --color--icon-button-background-text-default: #{variables.$color--elevation-level-f};
+    --color--icon-button-background-text-hovered: #{variables.$color--elevation-level-f};
+    --color--icon-button-background-text-pressed: #{variables.$color--elevation-level-b};
+    --color--icon-button-background-icon-default: #{variables.$color--elevation-level-1};
+    --color--icon-button-background-icon-hovered: #{variables.$color--accent-blue-lighter};
+    --color--icon-button-background-icon-pressed: #{variables.$color--accent-blue-darker};
+
+    #image
+    {
+      background: #{variables.$color--elevation-level-0};
+    }
+}
+
+
+.app.theme--light
+{
+    // Font
+    --color--font-default: #{variables.$color--font-dark};
+    --color--font-default-alt: #{variables.$color--font-light};
+
+    // Card
+    --color--app-background: #{variables.$color--elevation-level-b};
+    --color--card-background-high: #{variables.$color--elevation-level-f};
+    --color--card-background-low: #{variables.$color--elevation-level-d};
+    --color--card-backround-image: #{variables.$color--elevation-level-max};
+
+    // Background of Checkboxes and RadioButtons
+    --color--setting-background-unchecked-default: #{variables.$color--elevation-level-4}; 
+    --color--setting-background-unchecked-hovered: #{variables.$color--accent-orange-lighter};
+    --color--setting-background-unchecked-pressed: #{variables.$color--accent-orange-darker};
+    --color--setting-background-checked-default: #{variables.$color--accent-orange-lighter};
+    --color--setting-background-checked-hovered: #{variables.$color--elevation-level-f};
+    --color--setting-background-checked-pressed: #{variables.$color--elevation-level-4};
+    // Icon of Checkboxes and RadioButtons
+    --color--setting-icon-unchecked: #{variables.$color--elevation-level-4}; 
+    --color--setting-icon-unchecked-hovered: #{variables.$color--accent-orange-lighter};
+    --color--setting-icon-unchecked-pressed: #{variables.$color--accent-orange-darker};
+    --color--setting-icon-checked-default: #{variables.$color--elevation-level-1};
+    --color--setting-icon-checked-hovered: #{variables.$color--elevation-level-1};
+    --color--setting-icon-checked-pressed: #{variables.$color--elevation-level-7};
+    // Border of Checkboxes and RadioButtons
+    --color--setting-border-unchecked-default: #{variables.$color--elevation-level-7}; 
+    --color--setting-border-unchecked-hovered: #{variables.$color--elevation-level-1};
+    --color--setting-border-unchecked-pressed: #{variables.$color--elevation-level-2};
+    --color--setting-border-checked-default: #{variables.$color--elevation-level-1};
+    --color--setting-border-checked-hovered: #{variables.$color--elevation-level-1};
+    --color--setting-border-checked-pressed: #{variables.$color--elevation-level-7};
+
+
+    // Backgrounds of action menu buttons
+    --color--action-button-background-default: #{variables.$color--elevation-level-1};
+    --color--action-button-background-hovered: #{variables.$color--accent-orange-lighter};
+    --color--action-button-background-pressed: #{variables.$color--accent-orange-darker};
+    // Icons of action menu buttons
+    --color--action-button-icon-default: #{variables.$color--elevation-level-f};
+    --color--action-button-icon-hovered: #{variables.$color--elevation-level-1};
+    --color--action-button-icon-pressed: #{variables.$color--elevation-level-2};
+
+    // Icon of ToggleButton
+    --color--toggle-button-icon-default: #{variables.$color--accent-orange-lighter};
+    --color--toggle-button-icon-hovered: #{variables.$color--elevation-level-1};
+    --color--toggle-button-icon-pressed: #{variables.$color--elevation-level-4};
+    // Foreground (button) of ToggleButton
+    --color--toggle-button-foreground-default: #{variables.$color--elevation-level-f};
+    --color--toggle-button-foreground-hovered: #{variables.$color--elevation-level-f};
+    --color--toggle-button-foreground-pressed: #{variables.$color--elevation-level-d};
+    // Background of ToggleButton
+    --color--toggle-button-background-default: #{variables.$color--elevation-level-4};
+    --color--toggle-button-background-hovered: #{variables.$color--accent-orange-lighter};
+    --color--toggle-button-background-pressed: #{variables.$color--accent-orange-darker};
+
+    // Icon of IconButton
+    --color--icon-button-icon-default: #{variables.$color--elevation-level-f};
+    --color--icon-button-icon-hovered: #{variables.$color--accent-orange-lighter};
+    --color--icon-button-icon-pressed: #{variables.$color--accent-orange-darker};
+    // Background of IconButton
+    --color--icon-button-background-text-default: #{variables.$color--elevation-level-4};
+    --color--icon-button-background-text-hovered: #{variables.$color--accent-orange-lighter};
+    --color--icon-button-background-text-pressed: #{variables.$color--accent-orange-darker};
+    --color--icon-button-background-icon-default: #{variables.$color--elevation-level-1};
+    --color--icon-button-background-icon-hovered: #{variables.$color--elevation-level-1};
+    --color--icon-button-background-icon-pressed: #{variables.$color--elevation-level-2};
+
+    #image
+    {
+      background: #{variables.$color--elevation-level-max};
+      filter: invert(100%);
+    }
+}
+
+/* #endregion Themes */
