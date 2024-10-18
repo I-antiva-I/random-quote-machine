@@ -4,15 +4,15 @@
     v-on:mouseleave="()=>{icon?.onMouseLeave()}"
     v-on:mousedown="()=>{icon?.onMouseDown()}"
     v-on:mouseup="()=>{icon?.onMouseUp()}">
+    <div class="icon-button__content">
+      <div class="icon-button__indicator">
+        <IconSVG ref="icon" :icon="props.buttonIcon" :is-dependent="true"/>
+      </div>
 
-    <div class="icon-button__icon">
-      <IconSVG ref="icon" :icon="props.buttonIcon" :is-dependent="true"/>
+      <div class="icon-button__text">
+        {{ props.buttonText }}
+      </div>
     </div>
-
-    <div class="icon-button__text">
-      {{ props.buttonText }}
-    </div>
-
   </button>
 </template>
   
