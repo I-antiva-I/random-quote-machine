@@ -51,6 +51,17 @@
       </SettingsGroup>
 
     </div>
+    <!--
+    <div class="settings__footer">
+      
+      <div class="settings__menu">
+          <ActionMenu :current-card-side="CardSide.BACK"/>
+      </div>
+      <div class="settings__name">
+        <h2>Random Quote Machine</h2>
+      </div>
+    </div>
+     -->
   </div>
 </template>
   
@@ -73,7 +84,9 @@
   import SettingsGroup from "@/components/SettingsGroup.vue";
   import IconButton from "@/components/controls/IconButton.vue";
   import { useStore } from 'vuex';
+  import { CardSide } from '@/scripts/enums/CardSide';
   import type { Store } from 'vuex'
+  import ActionMenu from './ActionMenu.vue';
   import { type SettingsState, type SettingsGetters, type SettingsStore, SettingsActions } from "@/scripts/settingsStore";
 
   export default defineComponent({
@@ -85,6 +98,7 @@
         ToggleSwitch,
         SettingsGroup,
         IconButton,
+        ActionMenu,
       },
       
       setup(props) 
@@ -99,7 +113,7 @@
 
         const onInfoButtonClicked = () =>
         {
-          window.open('https://www.example.com', '_blank');
+          window.open('https://github.com/I-antiva-I/random-quote-machine', '_blank');
         }
       
         const areNavigationButtonsVisible = ref(store.getters.areNavigationButtonsVisible);
@@ -122,6 +136,7 @@
         return {
           Icon,
           ClockMode,
+          CardSide,
           areNavigationButtonsVisible,
           isRandomizeButtonVisible,
           isDarkThemeSelected,
