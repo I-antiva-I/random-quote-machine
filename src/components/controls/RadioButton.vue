@@ -13,7 +13,7 @@
         :checked="props.radioButtonValue === props.radioButtonAssignedValue" 
         v-on:change="onRadioButtonValueChanged">
 
-      <div class="radio-button__icon">
+      <div class="radio-button__indicator">
         <IconSVG ref="icon" :icon="Icon.CHECK_CIRCLE" :is-dependent="true"/>
       </div>
 
