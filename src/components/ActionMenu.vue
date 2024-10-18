@@ -1,25 +1,21 @@
 <template>
   <div class="action-menu">
 
-    <button v-show="isReturnButtonVisible" class="action-button" v-on:click="onReturnButtonClicked">
-      <IconSVG :icon="Icon.RETURN" />
-      <div class="action-button__text">Return</div>
-    </button>
+    <ActionButton  
+      v-show="isReturnButtonVisible"  v-on:click="onReturnButtonClicked"
+      :action-button-icon="Icon.RETURN" action-button-text="Return"/>
 
-    <button v-show="isSettingsButtonVisible" class="action-button" v-on:click="onSettingsButtonClicked">
-      <IconSVG :icon="Icon.GEAR" />
-      <div class="action-button__text">Settings</div>
-    </button>
+    <ActionButton  
+      v-show="isSettingsButtonVisible"  v-on:click="onSettingsButtonClicked"
+      :action-button-icon="Icon.GEAR" action-button-text="Settings"/>
+    
+    <ActionButton  
+      v-show="isRandomizeButtonVisible"  v-on:click="onRandomizeButtonClicked" id="new-quote"
+      :action-button-icon="diceIcon" action-button-text="Randomize"/>
 
-    <button v-show="isRandomizeButtonVisible" class="action-button" v-on:click="onRandomizeButtonClicked" id="new-quote">
-      <IconSVG :icon="diceIcon" />
-      <div class="action-button__text" >Randomize</div>
-    </button>
-
-    <button class="action-button" v-on:click="onShareButtonClicked" id="tweet-quote">
-      <IconSVG :icon="Icon.SHARE" />
-      <div class="action-button__text">Share</div>
-    </button>
+    <ActionButton  
+      v-on:click="onShareButtonClicked" id="tweet-quote"
+      :action-button-icon="Icon.SHARE" action-button-text="Share"/>
 
   </div>
 </template>
@@ -34,13 +30,13 @@
 
   import { Icon } from "@/scripts/enums/Icon";
   import { CardSide } from '@/scripts/enums/CardSide';
-  import IconSVG from "@/components/IconSVG.vue";
+  import ActionButton from "@/components/controls/ActionButton.vue";
   import { getRandomInteger } from '@/scripts/utility';
   import type { SettingsState, SettingsStore } from '@/scripts/settingsStore';
 
   export default defineComponent({
     name: "ActionMenuComponent",
-    components: { IconSVG },
+    components: { ActionButton },
     props:
     {
       currentCardSide: { type: Number, required: true },
