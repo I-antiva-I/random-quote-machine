@@ -119,6 +119,9 @@ svg {
   --color--setting-border-checked-default: #F5F5F5;
   --color--setting-border-checked-hovered: #F5F5F5;
   --color--setting-border-checked-pressed: #424242;
+  --color--navigation-button-icon-default: #F5F5F5;
+  --color--navigation-button-icon-hovered: #1E90FF;
+  --color--navigation-button-icon-pressed: #4169E1;
   --color--action-button-background-default: #F5F5F5;
   --color--action-button-background-hovered: #1E90FF;
   --color--action-button-background-pressed: #4169E1;
@@ -173,6 +176,9 @@ svg {
   --color--setting-border-checked-default: #121212;
   --color--setting-border-checked-hovered: #121212;
   --color--setting-border-checked-pressed: #727272;
+  --color--navigation-button-icon-default: #121212;
+  --color--navigation-button-icon-hovered: #D2691E;
+  --color--navigation-button-icon-pressed: #A0522D;
   --color--action-button-background-default: #121212;
   --color--action-button-background-hovered: #D2691E;
   --color--action-button-background-pressed: #A0522D;

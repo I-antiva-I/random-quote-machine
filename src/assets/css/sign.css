@@ -33,13 +33,13 @@
   cursor: pointer;
 }
 .sign__button .svg-icon--default svg {
-  fill: var(--color--interactive-background-default-alt);
+  fill: var(--color--navigation-button-icon-default);
 }
 .sign__button .svg-icon--hovered svg {
-  fill: transparent;
+  fill: var(--color--navigation-button-icon-hovered);
 }
 .sign__button .svg-icon--pressed svg {
-  fill: transparent;
+  fill: var(--color--navigation-button-icon-pressed);
 }
 .sign__button .svg-icon svg {
   width: 48px;

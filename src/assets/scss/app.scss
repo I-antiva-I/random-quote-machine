@@ -127,6 +127,10 @@ svg
     --color--setting-border-checked-hovered: #{variables.$color--elevation-level-f};
     --color--setting-border-checked-pressed: #{variables.$color--elevation-level-4};
 
+    // Icon of navigation button
+    --color--navigation-button-icon-default: #{variables.$color--elevation-level-f};
+    --color--navigation-button-icon-hovered: #{variables.$color--accent-blue-lighter};
+    --color--navigation-button-icon-pressed: #{variables.$color--accent-blue-darker};
 
     // Backgrounds of action menu buttons
     --color--action-button-background-default: #{variables.$color--elevation-level-f};
@@ -203,6 +207,10 @@ svg
     --color--setting-border-checked-hovered: #{variables.$color--elevation-level-1};
     --color--setting-border-checked-pressed: #{variables.$color--elevation-level-7};
 
+    // Icon of navigation button
+    --color--navigation-button-icon-default: #{variables.$color--elevation-level-1};
+    --color--navigation-button-icon-hovered: #{variables.$color--accent-orange-lighter};
+    --color--navigation-button-icon-pressed: #{variables.$color--accent-orange-darker};
 
     // Backgrounds of action menu buttons
     --color--action-button-background-default: #{variables.$color--elevation-level-1};

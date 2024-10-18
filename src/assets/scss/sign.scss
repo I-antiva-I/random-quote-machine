@@ -38,7 +38,10 @@
 
       .svg-icon
       {
-        @include mixins.svg-icon__colors(var(--color--interactive-background-default-alt));
+        @include mixins.svg-icon__colors(
+            var(--color--navigation-button-icon-default),
+            var(--color--navigation-button-icon-hovered),
+            var(--color--navigation-button-icon-pressed));
         @include mixins.svg-icon__size(variables.$size--navigation-arrow-icon);
       }
 
