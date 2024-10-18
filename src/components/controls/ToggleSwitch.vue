@@ -13,7 +13,7 @@
         :checked="props.toggleSwitchValue" 
         v-on:change="onToggleSwitchValueChanged">
         
-      <div class="toggle-switch__icon">
+      <div class="toggle-switch__indicator">
         <IconSVG ref="icon" :icon="toggleSwitchIcon" :is-dependent="true" />
       </div> 
 
