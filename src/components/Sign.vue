@@ -4,7 +4,7 @@
         <div class="sign__header">
           <button 
             v-if="store.getters.areNavigationButtonsVisible" 
-            class="sign__button button-prev" 
+            class="sign__button navigation-button navigation-button--prev" 
             v-on:click="getPrevSign" 
             aria-label="Show previous sign">
               <IconSVG :icon="Icon.ARROW_LEFT"/>
@@ -14,7 +14,7 @@
 
           <button 
             v-if="store.getters.areNavigationButtonsVisible" 
-            class="sign__button button-next" 
+            class="sign__button navigation-button navigation-button--next" 
             v-on:click="getNextSign" 
             aria-label="Show next sign">
              <IconSVG :icon="Icon.ARROW_RIGHT"/>
@@ -32,6 +32,12 @@
         <div class="sign__quote">
           <div id="text">{{ signQuote }}</div>
         </div>
+
+        <!--
+        <div class="sing__menu">
+          <ActionMenu :current-card-side="CardSide.FRONT"/>
+        </div>
+        -->
 
   </div>
 </template>
@@ -55,10 +61,11 @@ import {setSignRefs} from "@/scripts/managers/signManager";
 import { useRoute } from 'vue-router';
 import Clock from './Clock.vue';
 import { useResizeObserver } from '@vueuse/core';
-
+import { CardSide } from '@/scripts/enums/CardSide';
 import { useStore } from 'vuex';
 import type { Store } from 'vuex'
 import type { SettingsState } from "@/scripts/settingsStore";
+import ActionMenu from './ActionMenu.vue';
 
 
 export interface SignRefs
@@ -73,6 +80,7 @@ export default defineComponent({
   components: {
     IconSVG,
     Clock,
+    ActionMenu,
 
   },
 
@@ -200,7 +208,7 @@ export default defineComponent({
     return {
       // Enums
       Icon,
-
+      CardSide,
       // Local properties
       store,
       signIndex,
