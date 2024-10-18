@@ -13,7 +13,7 @@
         :checked="props.checkboxValue" 
         v-on:change="onCheckboxValueChanged">
         
-      <div class="checkbox__icon">
+      <div class="checkbox__indicator">
         <IconSVG ref="icon" :icon="Icon.CHECK_SQUARE" :is-dependent="true"/>
       </div>
         
