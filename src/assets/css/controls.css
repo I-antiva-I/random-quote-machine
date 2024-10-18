@@ -6,14 +6,7 @@
 /* #endregion Sizes */
 /* #region Shadows */
 /* #endregion Shadows */
-.checkbox__input,
-.radio-button__input,
-.toggle-switch__input {
-  position: absolute;
-  opacity: 0;
-  left: 0;
-}
-
+/* #region Checkbox, RadioButton, ToggleSwitch */
 .checkbox,
 .radio-button,
 .toggle-switch {
@@ -33,11 +26,17 @@
   gap: 8px;
   cursor: pointer;
 }
-.checkbox__icon,
-.radio-button__icon,
-.toggle-switch__icon {
-  background: black;
+.checkbox__indicator,
+.radio-button__indicator,
+.toggle-switch__indicator {
   padding: 4px;
+}
+.checkbox__input,
+.radio-button__input,
+.toggle-switch__input {
+  position: absolute;
+  opacity: 0;
+  left: 0;
 }
 .checkbox__text,
 .radio-button__text,
@@ -45,164 +44,205 @@
   user-select: none;
   font: normal bold 1.25rem/1 "Titillium Web", sans-serif;
   text-align: left;
-}
-.checkbox svg,
-.radio-button svg,
-.toggle-switch svg {
-  width: 24px;
-  height: 24px;
-  display: block;
+  color: var(--color--font-default);
 }
 
-.checkbox__icon {
+/* #endregion */
+/* #region Checkbox, RadioButton */
+.checkbox .svg-icon svg,
+.radio-button .svg-icon svg {
+  width: 24px;
+  height: 24px;
+}
+.checkbox--checked .svg-icon--default svg,
+.radio-button--checked .svg-icon--default svg {
+  fill: var(--color--setting-icon-checked-default);
+}
+.checkbox--checked .svg-icon--hovered svg,
+.radio-button--checked .svg-icon--hovered svg {
+  fill: var(--color--setting-icon-checked-hovered);
+}
+.checkbox--checked .svg-icon--pressed svg,
+.radio-button--checked .svg-icon--pressed svg {
+  fill: var(--color--setting-icon-checked-pressed);
+}
+.checkbox--checked .checkbox__indicator,
+.checkbox--checked .radio-button__indicator,
+.radio-button--checked .checkbox__indicator,
+.radio-button--checked .radio-button__indicator {
+  background: var(--color--setting-background-checked-default);
+  border: 2px solid var(--color--setting-border-checked-default);
+}
+.checkbox--checked:hover .checkbox__indicator,
+.checkbox--checked:hover .radio-button__indicator,
+.radio-button--checked:hover .checkbox__indicator,
+.radio-button--checked:hover .radio-button__indicator {
+  background: var(--color--setting-background-checked-hovered);
+  border: 2px solid var(--color--setting-border-checked-hovered);
+}
+.checkbox--checked:hover:active .checkbox__indicator,
+.checkbox--checked:hover:active .radio-button__indicator,
+.radio-button--checked:hover:active .checkbox__indicator,
+.radio-button--checked:hover:active .radio-button__indicator {
+  background: var(--color--setting-background-checked-pressed);
+  border: 2px solid var(--color--setting-border-checked-pressed);
+}
+.checkbox--unchecked .svg-icon--default svg,
+.radio-button--unchecked .svg-icon--default svg {
+  fill: transparent;
+}
+.checkbox--unchecked .svg-icon--hovered svg,
+.radio-button--unchecked .svg-icon--hovered svg {
+  fill: transparent;
+}
+.checkbox--unchecked .svg-icon--pressed svg,
+.radio-button--unchecked .svg-icon--pressed svg {
+  fill: transparent;
+}
+.checkbox--unchecked .checkbox__indicator,
+.checkbox--unchecked .radio-button__indicator,
+.radio-button--unchecked .checkbox__indicator,
+.radio-button--unchecked .radio-button__indicator {
+  background: var(--color--setting-background-unchecked-default);
+  border: 2px solid var(--color--setting-border-unchecked-default);
+}
+.checkbox--unchecked:hover .checkbox__indicator,
+.checkbox--unchecked:hover .radio-button__indicator,
+.radio-button--unchecked:hover .checkbox__indicator,
+.radio-button--unchecked:hover .radio-button__indicator {
+  background: var(--color--setting-background-unchecked-hovered);
+  border: 2px solid var(--color--setting-border-unchecked-hovered);
+}
+.checkbox--unchecked:hover:active .checkbox__indicator,
+.checkbox--unchecked:hover:active .radio-button__indicator,
+.radio-button--unchecked:hover:active .checkbox__indicator,
+.radio-button--unchecked:hover:active .radio-button__indicator {
+  background: var(--color--setting-background-unchecked-pressed);
+  border: 2px solid var(--color--setting-border-unchecked-pressed);
+}
+
+.checkbox__indicator {
   border-radius: 4px;
 }
 
-.radio-button__icon {
+.radio-button__indicator {
   border-radius: 100%;
 }
 
+/* #endregion */
+/* #region ToggleSwitch */
 .toggle-switch {
-  --color--interactive-default: whitesmoke;
-  --color--interactive-hovered: variables.$color--elevation-level-1;
-  --color--interactive-pressed: variables.$color--elevation-level-1;
+  /* #region States (on/off) */
+  /* #endregion */
 }
-.toggle-switch__icon {
-  border: 2px solid #525252;
+.toggle-switch__indicator {
   border-radius: 4px;
   padding: 4px;
-  background: dodgerblue;
-  width: 64px;
-  height: 32px;
-  box-sizing: content-box;
+  background: var(--color--toggle-button-background-default);
+  width: 92px;
 }
 .toggle-switch .svg-icon {
   padding: 4px;
   border-radius: 4px;
-  background: #323232;
-  width: 32px;
-  height: 32px;
+  background: var(--color--toggle-button-foreground-default);
+  width: 28px;
   transition: margin-left 500ms ease-in-out;
 }
-.toggle-switch:hover .toggle-switch__icon {
-  border: 2px solid #F5F5F5;
+.toggle-switch .svg-icon--default svg {
+  fill: var(--color--toggle-button-icon-default);
+}
+.toggle-switch .svg-icon--hovered svg {
+  fill: var(--color--toggle-button-icon-hovered);
+}
+.toggle-switch .svg-icon--pressed svg {
+  fill: var(--color--toggle-button-icon-pressed);
+}
+.toggle-switch .svg-icon svg {
+  width: 20px;
+  height: 20px;
+}
+.toggle-switch:hover .toggle-switch__indicator {
+  background: var(--color--toggle-button-background-hovered);
 }
 .toggle-switch:hover .svg-icon {
-  background: whitesmoke;
+  background: var(--color--toggle-button-foreground-hovered);
 }
-.toggle-switch:hover:active .toggle-switch__icon {
-  border: 2px solid mediumspringgreen;
+.toggle-switch:hover:active .toggle-switch__indicator {
+  background: var(--color--toggle-button-background-pressed);
 }
-
-.checkbox--checked,
-.radio-button--checked {
-  --color--interactive-default: whitesmoke;
-  --color--interactive-hovered: whitesmoke;
-  --color--interactive-pressed: dodgerblue;
+.toggle-switch:hover:active .svg-icon {
+  background: var(--color--toggle-button-foreground-pressed);
 }
-.checkbox--checked .checkbox__icon,
-.checkbox--checked .radio-button__icon,
-.radio-button--checked .checkbox__icon,
-.radio-button--checked .radio-button__icon {
-  background: dodgerblue;
-  border: 2px solid dodgerblue;
-}
-.checkbox--checked:hover .checkbox__icon,
-.checkbox--checked:hover .radio-button__icon,
-.radio-button--checked:hover .checkbox__icon,
-.radio-button--checked:hover .radio-button__icon {
-  border: 2px solid #F5F5F5;
-}
-.checkbox--checked:hover:active .checkbox__icon,
-.checkbox--checked:hover:active .radio-button__icon,
-.radio-button--checked:hover:active .checkbox__icon,
-.radio-button--checked:hover:active .radio-button__icon {
-  border: 2px solid mediumseagreen;
-}
-.checkbox--unchecked,
-.radio-button--unchecked {
-  --color--interactive-default: #323232;
-  --color--interactive-hovered: #525252;
-  --color--interactive-pressed: mediumseagreen;
-}
-.checkbox--unchecked .checkbox__icon,
-.checkbox--unchecked .radio-button__icon,
-.radio-button--unchecked .checkbox__icon,
-.radio-button--unchecked .radio-button__icon {
-  background: #323232;
-  border: 2px solid #525252;
-}
-.checkbox--unchecked:hover .checkbox__icon,
-.checkbox--unchecked:hover .radio-button__icon,
-.radio-button--unchecked:hover .checkbox__icon,
-.radio-button--unchecked:hover .radio-button__icon {
-  background: #525252;
-  border: 2px solid #F5F5F5;
-}
-.checkbox--unchecked:hover:active .checkbox__icon,
-.checkbox--unchecked:hover:active .radio-button__icon,
-.radio-button--unchecked:hover:active .checkbox__icon,
-.radio-button--unchecked:hover:active .radio-button__icon {
-  background: #424242;
-  border: 2px solid mediumseagreen;
-}
-
 .toggle-switch--on .svg-icon {
   margin-left: 0px;
 }
 .toggle-switch--off .svg-icon {
-  margin-left: 32px;
+  margin-left: 56px;
 }
 
+/* #endregion */
 /* #region IconButton */
 .icon-button {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: stretch;
   border-radius: 8px;
   overflow: hidden;
   border: none;
+  outline: none;
   cursor: pointer;
-  --color--interactive-default: #F5F5F5;
-  --color--interactive-hovered: #F5F5F5;
-  --color--interactive-pressed: #F5F5F5;
-  background: #424242;
+  background: transparent;
 }
-.icon-button__icon {
-  background: #121212;
+.icon-button__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+}
+.icon-button .svg-icon svg {
+  width: 24px;
+  height: 24px;
+}
+.icon-button .svg-icon--default svg {
+  fill: var(--color--icon-button-icon-default);
+}
+.icon-button .svg-icon--hovered svg {
+  fill: var(--color--icon-button-icon-hovered);
+}
+.icon-button .svg-icon--pressed svg {
+  fill: var(--color--icon-button-icon-pressed);
+}
+.icon-button__indicator {
+  background: var(--color--icon-button-background-icon-default);
   padding: 8px;
-}
-.icon-button__icon svg {
-  width: 32px;
-  height: 32px;
-  display: block;
+  overflow: hidden;
+  border-radius: 8px 0 0 8px;
 }
 .icon-button__text {
   user-select: none;
-  font: normal bold 1.5rem/1 "Titillium Web", sans-serif;
+  font: normal bold 1.25rem/1 "Titillium Web", sans-serif;
   text-align: left;
-  color: #F5F5F5;
+  color: var(--color--font-default-alt);
   padding-left: 8px;
   flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--color--icon-button-background-text-default);
 }
-.icon-button:hover {
-  background: #F5F5F5;
-}
-.icon-button:hover .icon-button__icon {
-  background: dodgerblue;
+.icon-button:hover .icon-button__indicator {
+  background: var(--color--icon-button-background-icon-hovered);
 }
 .icon-button:hover .icon-button__text {
-  color: #121212;
+  background: var(--color--icon-button-background-text-hovered);
 }
-.icon-button:hover:active {
-  background: #F5F5F5;
-}
-.icon-button:hover:active .icon-button__icon {
-  background: mediumseagreen;
+.icon-button:hover:active .icon-button__indicator {
+  background: var(--color--icon-button-background-icon-pressed);
 }
 .icon-button:hover:active .icon-button__text {
-  color: #121212;
+  background: var(--color--icon-button-background-text-pressed);
 }
 
 /* #endregion *//*# sourceMappingURL=controls.css.map */

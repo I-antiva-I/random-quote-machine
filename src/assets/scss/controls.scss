@@ -1,19 +1,8 @@
 @use "variables.scss";
 @use "mixins.scss";
 
-// "Hide" default checkbox/radio button
-.checkbox,
-.radio-button,
-.toggle-switch
-{
-  &__input
-  {
-    position: absolute;
-    opacity: 0;
-    left: 0;
-  }
-}
 
+/* #region Checkbox, RadioButton, ToggleSwitch */
 
 .checkbox,
 .radio-button,
@@ -38,188 +27,202 @@
         cursor: pointer;
     }
 
-    &__icon 
+    &__indicator 
     {
-        background: black;
         padding: 4px;
     }
-    
+
+    // "Hide" default checkbox/radio button
+    &__input
+    {
+      position: absolute;
+      opacity: 0;
+      left: 0;
+    }
+
     &__text
     {
         user-select: none;
-        font: variables.$font--control-element-default;
+        font: variables.$font--settings-element;
         text-align: left;
-    }
-
-    svg 
-    {
-        width: 24px;
-        height: 24px;
-        display: block;
-    }
-
-}
-
-.checkbox
-{
-    &__icon
-    {
-        border-radius: 4px;
+        color: var(--color--font-default);
     }
 }
 
-.radio-button
-{
-    &__icon
-    {
-        border-radius: 100%;
-    }
-}
+/* #endregion */
 
-.toggle-switch
-{
+/* #region Checkbox, RadioButton */
 
-    --color--interactive-default: whitesmoke;
-    --color--interactive-hovered: variables.$color--elevation-level-1;
-    --color--interactive-pressed: variables.$color--elevation-level-1;
-
-    &__icon
-    {
-        border: 2px solid variables.$color--elevation-level-5;
-        border-radius: 4px;
-        padding: 4px;
-
-        background: dodgerblue;
-
-        width: 64px;
-        height: 32px;
-
-        box-sizing: content-box;
-    }
-
-
-    .svg-icon
-    {
-       
-       // border: 1px solid white;
-        padding: 4px;
-        border-radius: 4px;
-
-        background: variables.$color--elevation-level-3;
-
-        width: 32px;
-        height: 32px;
-        
-        transition: margin-left 500ms ease-in-out;
-    }
-
-    &:hover
-    {
-        .toggle-switch__icon
-        {
-            border: 2px solid variables.$color--font-default;
-        }
-
-        .svg-icon
-        {
-             background: whitesmoke;
-        }
-    
-    }
-
-    &:hover:active
-    {
-        .toggle-switch__icon
-        {
-            border: 2px solid mediumspringgreen;
-        }
-
-    }
-
-}
-
-// States (checked/unchecked) and (on/off)
 .checkbox,
 .radio-button
 {
-    &--checked 
-    {   
-        --color--interactive-default: whitesmoke;
-        --color--interactive-hovered: whitesmoke;
-        --color--interactive-pressed: dodgerblue;
+    .svg-icon
+    {
+        @include mixins.svg-icon__size(variables.$size--settings-item-icon);
+    }
 
-        .checkbox__icon,
-        .radio-button__icon
+    // States (checked/unchecked)
+
+    &--checked 
+    {           
+        .svg-icon
         {
-            background: dodgerblue;
-            border: 2px solid dodgerblue;
+            @include mixins.svg-icon__colors(
+                var(--color--setting-icon-checked-default),
+                var(--color--setting-icon-checked-hovered),
+                var(--color--setting-icon-checked-pressed));
+        }
+    
+        .checkbox__indicator,
+        .radio-button__indicator
+        {
+            background: var(--color--setting-background-checked-default);
+            border: 2px solid var(--color--setting-border-checked-default);
         }
 
         &:hover
         {
-            .checkbox__icon,
-            .radio-button__icon
+            .checkbox__indicator,
+            .radio-button__indicator
             {
-              //  background: variables.$color--elevation-level-5;
-                border: 2px solid variables.$color--font-default;
+                background: var(--color--setting-background-checked-hovered);
+                border: 2px solid var(--color--setting-border-checked-hovered);
             }    
         }
 
         &:hover:active
         {
-            .checkbox__icon,
-            .radio-button__icon
+            .checkbox__indicator,
+            .radio-button__indicator
             {
-               // background: mediumspringgreen;
-                border: 2px solid mediumseagreen;
+                background: var(--color--setting-background-checked-pressed);
+                border: 2px solid var(--color--setting-border-checked-pressed);
             }    
         }
     }
 
     &--unchecked 
     {
-        --color--interactive-default: #{variables.$color--elevation-level-3};
-        --color--interactive-hovered: #{variables.$color--elevation-level-5};
-        --color--interactive-pressed: mediumseagreen;
-
-        .checkbox__icon,
-        .radio-button__icon
+        .svg-icon
         {
-            background: variables.$color--elevation-level-3;
-            border: 2px solid variables.$color--elevation-level-5;
+            @include mixins.svg-icon__colors(
+                transparent,
+                transparent,
+                transparent);
+        }
+
+        .checkbox__indicator,
+        .radio-button__indicator
+        {
+            background: var(--color--setting-background-unchecked-default);
+            border: 2px solid var(--color--setting-border-unchecked-default);
         }
 
         &:hover
         {
-            .checkbox__icon,
-            .radio-button__icon
+            .checkbox__indicator,
+            .radio-button__indicator
             {
-                background: variables.$color--elevation-level-5;
-                border: 2px solid variables.$color--font-default;
+                background: var(--color--setting-background-unchecked-hovered);
+                border: 2px solid var(--color--setting-border-unchecked-hovered);
             }    
         }
 
         &:hover:active
         {
-            .checkbox__icon,
-            .radio-button__icon
+            .checkbox__indicator,
+            .radio-button__indicator
             {
-                background: variables.$color--elevation-level-4;
-                border: 2px solid mediumseagreen;
+                background: var(--color--setting-background-unchecked-pressed);
+                border: 2px solid var(--color--setting-border-unchecked-pressed);
             }    
         }
     }
 }
 
+ .checkbox
+{
+    &__indicator
+    {
+        border-radius: 4px;
+    }
+}
+
+.radio-button
+{
+    &__indicator
+    {
+        border-radius: 100%;
+    }
+}
+
+/* #endregion */
+
+/* #region ToggleSwitch */
+
 .toggle-switch
 {
-    &--on 
+    
+    &__indicator
     {
-        .toggle-switch__icon
+        border-radius: 4px;
+        padding: 4px;
+
+        background: var(--color--toggle-button-background-default);
+
+        width: variables.$size--settings-toggle-indicator;
+    }
+
+    .svg-icon
+    {
+        padding: 4px;
+        border-radius: 4px;
+
+        background: var(--color--toggle-button-foreground-default);
+
+        @include mixins.svg-icon__colors(
+            var(--color--toggle-button-icon-default),
+            var(--color--toggle-button-icon-hovered),
+            var(--color--toggle-button-icon-pressed));
+        @include mixins.svg-icon__size(variables.$size--settings-toggle-icon);
+
+        width: variables.$size--settings-toggle-icon + 4px*2;
+       
+        transition: margin-left 500ms ease-in-out;
+    }
+
+    &:hover
+    {
+        .toggle-switch__indicator
         {
-         
+           background: var(--color--toggle-button-background-hovered);
         }
 
+        .svg-icon
+        {
+            background: var(--color--toggle-button-foreground-hovered);
+        }
+    
+    }
+
+    &:hover:active
+    {
+        .toggle-switch__indicator
+        {
+           background: var(--color--toggle-button-background-pressed);
+        }
+
+        .svg-icon
+        {
+            background: var(--color--toggle-button-foreground-pressed);
+        }
+
+    }
+
+    /* #region States (on/off) */
+
+    &--on 
+    {
         .svg-icon
         {
             margin-left: 0px;
@@ -228,18 +231,16 @@
 
     &--off 
     {
-        .toggle-switch__icon
-        {
-           // background: dodgerblue;
-
-        }
-
         .svg-icon
         {
-            margin-left: 32px;
+            margin-left: variables.$size--settings-toggle-indicator - variables.$size--settings-toggle-icon - 4px*2 - 4px*2;
         }
     }
+
+    /* #endregion */
 }
+
+/* #endregion */
 
 /* #region IconButton */
 
@@ -248,71 +249,85 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
 
-    border-radius: 8px;
+    border-radius: 8px ;
     overflow: hidden;
     border: none;
+    outline: none;
 
-    
-    cursor: pointer;
-
-    --color--interactive-default: #{variables.$color--font-default};
-    --color--interactive-hovered: #{variables.$color--font-default};
-    --color--interactive-pressed: #{variables.$color--font-default};
-
-    background: variables.$color--elevation-level-4;
-
-
-    &__icon
+    &__content
     {
-        background: variables.$color--elevation-level-1;
-        padding: 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 100%;
 
-        svg 
-        {
-            width: 32px;
-            height: 32px;
-            display: block;
-        }
+    }
+
+    cursor: pointer;
+    background: transparent;
+  
+    .svg-icon
+    {
+        @include mixins.svg-icon__size(variables.$size--settings-item-icon);
+        @include mixins.svg-icon__colors(
+            var(--color--icon-button-icon-default),
+            var(--color--icon-button-icon-hovered),
+            var(--color--icon-button-icon-pressed));
+    }
+
+    &__indicator
+    {
+        background: var(--color--icon-button-background-icon-default);
+        padding: 8px;
+        overflow: hidden;
+        border-radius: 8px 0 0 8px;
     }
     
-
     &__text
     {
         user-select: none;
-        font: variables.$font--control-element-icon-button;
+        font: variables.$font--settings-element;
         text-align: left;
-        color: variables.$color--font-default;
+        color: var(--color--font-default-alt);
 
        // background: red;
         padding-left: 8px;
         flex-grow: 1;
+      
+
+        display: flex;
+        justify-content: flex-start; 
+        align-items: center; 
+
+        background: var(--color--icon-button-background-text-default);
     }
 
     &:hover
     {
-        background: variables.$color--font-default;
-        .icon-button__icon
+        
+        .icon-button__indicator
         {
-            background: dodgerblue;
+            background: var(--color--icon-button-background-icon-hovered);
         }
         .icon-button__text
         {
-            color: variables.$color--font-default-alt;
+            background: var(--color--icon-button-background-text-hovered);;
         }
     }
 
     &:hover:active
     {
-        background: variables.$color--font-default;
-        .icon-button__icon
+        //background: var(--color--interactive-border-default);;
+        .icon-button__indicator
         {
-            background: mediumseagreen;
+            background: var(--color--icon-button-background-icon-pressed);
         }
         .icon-button__text
         {
-            color: variables.$color--font-default-alt;
+            background: var(--color--icon-button-background-text-pressed);
         }
     }
 

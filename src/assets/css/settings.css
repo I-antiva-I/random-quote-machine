@@ -8,7 +8,7 @@
 /* #endregion Shadows */
 /* #region Settings */
 .settings {
-  background: #222222;
+  background: var(--color--card-background-low);
   border-radius: 8px;
   overflow: hidden;
   padding: 1rem;
@@ -26,6 +26,7 @@
   font-weight: bold;
   line-height: 1;
   text-transform: uppercase;
+  color: var(--color--font-default);
 }
 .settings__content {
   display: flex;
@@ -49,6 +50,7 @@
   line-height: 1;
   text-transform: uppercase;
   text-align: left;
+  color: var(--color--font-default);
 }
 .settings-group__content {
   display: flex;
@@ -78,6 +80,7 @@
   line-height: 1;
   text-transform: capitalize;
   text-align: left;
+  color: var(--color--font-default);
 }
 .settings-sub-group__content {
   display: flex;

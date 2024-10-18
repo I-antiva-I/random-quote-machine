@@ -3,7 +3,6 @@
 
 .sign
 {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,17 +11,11 @@
     border-radius: 8px;
     overflow: hidden;
 
-    background-color: variables.$color--elevation-level-1;
-    color: variables.$color--font-default;
+    background-color: var(--color--card-background-low);
+    color: var(--color--font-default);
 
-
-    //transition: min-height 1s ease;
     height: auto;
-    //min-width: 600px;
-   // max-width: 600px;
-  //  min-width: 325px;
-   // max-height: 750px;
-   max-width: 500px;
+    max-width: variables.$size--sign-max-width-mobile;
 
     &__header
     {
@@ -31,32 +24,24 @@
         justify-content: space-between;
         align-items: center; 
 
-        background-color: variables.$color--elevation-level-4;
+        background-color: var(--color--card-background-high);
 
-   
-        font: variables.$font--sign-header;
-        padding: 16px;
-        
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
-
-    
+        font: variables.$font--sign-index;
+        padding: 16px;   
     }
     
     &__button
     {
       background: none;
       border: none;
+      cursor: pointer;
 
       .svg-icon
       {
-        @include mixins.svg-icon__colors(#FFFFFF, #1E90FF, #FFFFFF);
+        @include mixins.svg-icon__colors(var(--color--interactive-background-default-alt));
+        @include mixins.svg-icon__size(variables.$size--navigation-arrow-icon);
       }
 
-      svg
-      {
-        width: 48px;
-        height: 48px;  
-      }
     }
 
     &__index
@@ -68,10 +53,9 @@
 
     &__timer
     {
-        background-color: variables.$color--elevation-level-2;
+        background-color: var(--color--card-background-low);
 
         text-align: center;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
         
         .clock
         {
@@ -80,9 +64,8 @@
             justify-content: center;
             align-items: center;
             
-            padding: 8px;
+            padding: 0 8px;
             gap: 16px;
-
  
             .clock__time
             {
@@ -113,7 +96,8 @@
 
             .clock__period
             {
-                background: black;
+                background: var(--color--font-default-alt);
+                color: var(--color--font-default);
             }
         }
     }
@@ -126,62 +110,25 @@
         justify-content: center;
         align-items: center; 
 
-    
-      // padding: 4px;
-
-      /*
-        background-image: radial-gradient( black 90.5%,
-         variables.$color--elevation-level-4 91% , variables.$color--elevation-level-4);
-
-         background-image: radial-gradient( white 90.5%,
-         variables.$color--elevation-level-4 91% , variables.$color--elevation-level-4);
-
-         background-image: radial-gradient( dodgerblue 90.5%,
-         variables.$color--elevation-level-4 91% , variables.$color--elevation-level-4);
-
-         background-image: radial-gradient( black 90.5%,
-         white 91% , white);
-         */
-         background: black
+        background: var(--color--card-backround-image);
     }
     
     .image-frame
     {
- 
-       // width: 100%; 
         height: auto;
         position: absolute;
         display: none;
-
-      
-
-      //  background-image: radial-gradient(  variables.$color--elevation-level-3 90.5%,
-       // variables.$color--elevation-level-4 91% , variables.$color--elevation-level-4);
-
-       // background-image: radial-gradient( transparent 90.5%,
-       // variables.$color--elevation-level-4 91% , variables.$color--elevation-level-4);
     }
 
     #image
     { 
-       // padding: 8px;
-
-   
-       // border-radius: 16px;
         overflow: hidden;
-       // max-width: 256px;
-        //max-height: 256px;
-        
-
+     
         width: 100%; 
         height: auto;
 
         max-width: 325px;
         max-height: 325px;
-
-       // filter: invert(1);
-       //mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
-        //display: none;
     }
 
     &__quote
@@ -191,16 +138,12 @@
         align-items: center; 
 
         min-height: 8rem;
-
         padding: 1rem 1rem;
 
+        background-color: var(--color--card-background-low);
+
         font: variables.$font--sign-quote;
-
-        background-color: variables.$color--elevation-level-2;
-
+        color: var(--color--font-default);
         text-align: center;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
-
-
     }
 }

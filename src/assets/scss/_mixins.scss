@@ -97,7 +97,7 @@
   }
 }
 
-@mixin svg-icon__colors($color-default: var(--color--interactive-default), $color-hovered: none, $color-pressed: none)
+@mixin svg-icon__colors($color-default: transparent, $color-hovered: transparent, $color-pressed: transparent)
 {
   &--default
   {
@@ -111,14 +111,7 @@
   {
     svg
     {
-      @if $color-hovered == none
-      {
-        fill: var(--color--interactive-hovered);
-      }
-      @else
-      {
-        fill: $color-hovered;
-      }
+      fill: $color-hovered;
     }
   }
 
@@ -126,14 +119,7 @@
   {
     svg
     {
-      @if $color-pressed == none
-      {
-        fill: var(--color--interactive-pressed);
-      }
-      @else
-      {
-        fill: $color-pressed;
-      }
+      fill: $color-pressed;
     }
   }
 }

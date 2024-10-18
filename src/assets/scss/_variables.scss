@@ -8,10 +8,23 @@ $color--elevation-level-4: #424242;
 $color--elevation-level-5: #525252;
 $color--elevation-level-6: #626262;
 $color--elevation-level-7: #727272;
-$color--elevation-level-max: #F5F5F5;
+$color--elevation-level-8: #858585;
+$color--elevation-level-9: #959595;
+$color--elevation-level-a: #A5A5A5;
+$color--elevation-level-b: #B5B5B5;
+$color--elevation-level-c: #C5C5C5;
+$color--elevation-level-d: #D5D5D5;
+$color--elevation-level-e: #E5D5D5;
+$color--elevation-level-f: #F5F5F5;
+$color--elevation-level-max: #FFFFFF;
 
-$color--font-default: #F5F5F5; 
-$color--font-default-alt: #121212;
+$color--font-light: #F5F5F5; 
+$color--font-dark: #121212;
+ 
+$color--accent-blue-lighter: #1E90FF; 
+$color--accent-blue-darker: #4169E1; 
+$color--accent-orange-lighter: #D2691E; 
+$color--accent-orange-darker: #A0522D; 
 
 /* #endregion Colors */
 
@@ -28,14 +41,16 @@ $color--font-default-alt: #121212;
 // ==================================================
 
 // Sign
-$font--sign-header: normal normal 3rem / 1 "Rubik Mono One", monospace;
-$font--sign-clock-time: normal bold 2rem / 1 "Titillium Web", sans-serif;
-$font--sign-clock-period: normal bold 1rem / 1 "Titillium Web", sans-serif;
-$font--sign-quote: normal bold 2rem / 1.25 "Titillium Web", sans-serif;
+$font--sign-index:          normal normal 3rem / 1 "Rubik Mono One", monospace;
+$font--sign-clock-time:     normal bold 1.5rem / 2 "Titillium Web", sans-serif;
+$font--sign-clock-period:   normal bold 0.75rem / 1 "Rubik Mono One", monospace;
+$font--sign-quote:          normal bold 1.5rem / 1.5 "Titillium Web", sans-serif;
 
 // Settings
-$font--control-element-default: normal bold 1.25rem / 1 "Titillium Web", sans-serif;
-$font--control-element-icon-button: normal bold 1.5rem / 1 "Titillium Web", sans-serif;
+$font--settings-header:                 normal bold 2.5rem / 1 "Titillium Web", sans-serif;
+$font--settings-group-header:           normal bold 1.75rem / 1 "Titillium Web", sans-serif;
+$font--settings-subgroup-header:        normal bold 1.5rem / 1 "Titillium Web", sans-serif;
+$font--settings-element:                normal bold 1.25rem / 1 "Titillium Web", sans-serif;
 
 // Action menu
 $font--action-menu-default: normal normal 1rem / 1 "Titillium Web", sans-serif;
@@ -44,14 +59,29 @@ $font--action-menu-default: normal normal 1rem / 1 "Titillium Web", sans-serif;
 
 /* #region Sizes */
 
+$size--card-max-width-mobile:   325px;
 $size--sign-max-width-mobile:   325px;
+$size--card-max-width-desktop:  1000px;
 $size--sign-max-width-desktop:  500px;
 
+$size--action-button-icon:          28px;
+$size--navigation-arrow-icon:       48px;
+$size--settings-item-icon:          24px;
+$size--settings-toggle-icon:        20px;
+$size--settings-toggle-indicator:   ($size--settings-toggle-icon + 4px*2)*3 + 4px*2 ; // (Size + Padding of SVG*2)*3 + Padding of indicator*2 
 
 /* #endregion Sizes */
 
 /* #region Shadows */
 
-$shadow--text-default: 0px 2px 4px rgba(0, 0, 0, 0.5); 
+$shadow--default: 
+    0px 1px 2px 1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.4);
+
+$shadow--default-large: 
+    0px 2px 4px 2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.4);
 
 /* #endregion Shadows */
+
+

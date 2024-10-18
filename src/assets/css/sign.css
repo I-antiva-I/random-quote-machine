@@ -13,35 +13,35 @@
   align-items: stretch;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #121212;
-  color: #F5F5F5;
+  background-color: var(--color--card-background-low);
+  color: var(--color--font-default);
   height: auto;
-  max-width: 500px;
+  max-width: 325px;
 }
 .sign__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #424242;
+  background-color: var(--color--card-background-high);
   font: normal normal 3rem/1 "Rubik Mono One", monospace;
   padding: 16px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 .sign__button {
   background: none;
   border: none;
+  cursor: pointer;
 }
 .sign__button .svg-icon--default svg {
-  fill: #FFFFFF;
+  fill: var(--color--interactive-background-default-alt);
 }
 .sign__button .svg-icon--hovered svg {
-  fill: #1E90FF;
+  fill: transparent;
 }
 .sign__button .svg-icon--pressed svg {
-  fill: #FFFFFF;
+  fill: transparent;
 }
-.sign__button svg {
+.sign__button .svg-icon svg {
   width: 48px;
   height: 48px;
 }
@@ -51,26 +51,25 @@
   user-select: none;
 }
 .sign__timer {
-  background-color: #222222;
+  background-color: var(--color--card-background-low);
   text-align: center;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 .sign__timer .clock {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 8px;
+  padding: 0 8px;
   gap: 16px;
 }
 .sign__timer .clock .clock__time {
   text-align: center;
-  font: normal bold 2rem/1 "Titillium Web", sans-serif;
+  font: normal bold 1.5rem/2 "Titillium Web", sans-serif;
   padding: 0.25rem 0;
 }
 .sign__timer .clock .clock__placeholder,
 .sign__timer .clock .clock__period {
-  font: normal bold 1rem/1 "Titillium Web", sans-serif;
+  font: normal bold 0.75rem/1 "Rubik Mono One", monospace;
   border-radius: 8px;
   display: flex;
   flex-direction: row; /* Stack the elements vertically */
@@ -80,27 +79,15 @@
   padding: 0.5rem 16px;
 }
 .sign__timer .clock .clock__period {
-  background: black;
+  background: var(--color--font-default-alt);
+  color: var(--color--font-default);
 }
 .sign__image {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*
-    background-image: radial-gradient( black 90.5%,
-     variables.$color--elevation-level-4 91% , variables.$color--elevation-level-4);
-
-     background-image: radial-gradient( white 90.5%,
-     variables.$color--elevation-level-4 91% , variables.$color--elevation-level-4);
-
-     background-image: radial-gradient( dodgerblue 90.5%,
-     variables.$color--elevation-level-4 91% , variables.$color--elevation-level-4);
-
-     background-image: radial-gradient( black 90.5%,
-     white 91% , white);
-     */
-  background: black;
+  background: var(--color--card-backround-image);
 }
 .sign .image-frame {
   height: auto;
@@ -120,8 +107,8 @@
   align-items: center;
   min-height: 8rem;
   padding: 1rem 1rem;
-  font: normal bold 2rem/1.25 "Titillium Web", sans-serif;
-  background-color: #222222;
+  background-color: var(--color--card-background-low);
+  font: normal bold 1.5rem/1.5 "Titillium Web", sans-serif;
+  color: var(--color--font-default);
   text-align: center;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }/*# sourceMappingURL=sign.css.map */

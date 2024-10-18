@@ -6,14 +6,6 @@
 /* #endregion Sizes */
 /* #region Shadows */
 /* #endregion Shadows */
-body {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #000000;
-}
-
 .card {
   position: relative;
   display: flex;
@@ -21,7 +13,6 @@ body {
   align-items: center;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 4rem;
 }
 
 .card__wrapper {
@@ -61,4 +52,15 @@ body {
 .card-side--back {
   position: absolute;
   transform: rotateY(180deg);
+}
+
+@media (min-width: 600px) {
+  .action-menu {
+    position: fixed;
+    right: 1rem;
+    height: auto;
+  }
+  .card {
+    padding-top: 4rem;
+  }
 }/*# sourceMappingURL=home_view.css.map */

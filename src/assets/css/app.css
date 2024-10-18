@@ -24,27 +24,35 @@
   font-weight: bold;
   font-style: normal;
 }
-#CSSViewer_block * {
-  color: black;
-}
-
 *, *::after, *::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   pointer-events: all;
-  color: whitesmoke;
 }
 
-#app {
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#root {
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: stretch;
+}
+
+.app {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
-  --color--interactive-default: red
-  --color--interactive-hovered: green;
-  --color--interactive-pressed: blue;
+  background: var(--color--app-background);
+  color: var(--color--font-default);
 }
 
 svg {
@@ -84,4 +92,115 @@ svg {
   scrollbar-color: #424242 #121212;
 }
 
-/* #endregion Scrollbar *//*# sourceMappingURL=app.css.map */
+/* #endregion Scrollbar */
+/* #region Themes */
+.app.theme--dark {
+  --color--font-default: #F5F5F5;
+  --color--font-default-alt: #121212;
+  --color--app-background: #121212;
+  --color--card-background-high: #323232;
+  --color--card-background-low: #222222;
+  --color--card-backround-image: #000000;
+  --color--setting-background-unchecked-default: #121212;
+  --color--setting-background-unchecked-hovered: #1E90FF;
+  --color--setting-background-unchecked-pressed: #4169E1;
+  --color--setting-background-checked-default: #1E90FF;
+  --color--setting-background-checked-hovered: #121212;
+  --color--setting-background-checked-pressed: #121212;
+  --color--setting-icon-unchecked: #121212;
+  --color--setting-icon-unchecked-hovered: #1E90FF;
+  --color--setting-icon-unchecked-pressed: #4169E1;
+  --color--setting-icon-checked-default: #F5F5F5;
+  --color--setting-icon-checked-hovered: #F5F5F5;
+  --color--setting-icon-checked-pressed: #424242;
+  --color--setting-border-unchecked-default: #424242;
+  --color--setting-border-unchecked-hovered: #F5F5F5;
+  --color--setting-border-unchecked-pressed: #B5B5B5;
+  --color--setting-border-checked-default: #F5F5F5;
+  --color--setting-border-checked-hovered: #F5F5F5;
+  --color--setting-border-checked-pressed: #424242;
+  --color--action-button-background-default: #F5F5F5;
+  --color--action-button-background-hovered: #1E90FF;
+  --color--action-button-background-pressed: #4169E1;
+  --color--action-button-icon-default: #121212;
+  --color--action-button-icon-hovered: #F5F5F5;
+  --color--action-button-icon-pressed: #B5B5B5;
+  --color--toggle-button-icon-default: #F5F5F5;
+  --color--toggle-button-icon-hovered: #1E90FF;
+  --color--toggle-button-icon-pressed: #4169E1;
+  --color--toggle-button-foreground-default: #222222;
+  --color--toggle-button-foreground-hovered: #F5F5F5;
+  --color--toggle-button-foreground-pressed: #B5B5B5;
+  --color--toggle-button-background-default: #121212;
+  --color--toggle-button-background-hovered: #1E90FF;
+  --color--toggle-button-background-pressed: #4169E1;
+  --color--icon-button-icon-default: #F5F5F5;
+  --color--icon-button-icon-hovered: #F5F5F5;
+  --color--icon-button-icon-pressed: #B5B5B5;
+  --color--icon-button-background-text-default: #F5F5F5;
+  --color--icon-button-background-text-hovered: #F5F5F5;
+  --color--icon-button-background-text-pressed: #B5B5B5;
+  --color--icon-button-background-icon-default: #121212;
+  --color--icon-button-background-icon-hovered: #1E90FF;
+  --color--icon-button-background-icon-pressed: #4169E1;
+}
+.app.theme--dark #image {
+  background: #000000;
+}
+
+.app.theme--light {
+  --color--font-default: #121212;
+  --color--font-default-alt: #F5F5F5;
+  --color--app-background: #B5B5B5;
+  --color--card-background-high: #F5F5F5;
+  --color--card-background-low: #D5D5D5;
+  --color--card-backround-image: #FFFFFF;
+  --color--setting-background-unchecked-default: #424242;
+  --color--setting-background-unchecked-hovered: #D2691E;
+  --color--setting-background-unchecked-pressed: #A0522D;
+  --color--setting-background-checked-default: #D2691E;
+  --color--setting-background-checked-hovered: #F5F5F5;
+  --color--setting-background-checked-pressed: #424242;
+  --color--setting-icon-unchecked: #424242;
+  --color--setting-icon-unchecked-hovered: #D2691E;
+  --color--setting-icon-unchecked-pressed: #A0522D;
+  --color--setting-icon-checked-default: #121212;
+  --color--setting-icon-checked-hovered: #121212;
+  --color--setting-icon-checked-pressed: #727272;
+  --color--setting-border-unchecked-default: #727272;
+  --color--setting-border-unchecked-hovered: #121212;
+  --color--setting-border-unchecked-pressed: #222222;
+  --color--setting-border-checked-default: #121212;
+  --color--setting-border-checked-hovered: #121212;
+  --color--setting-border-checked-pressed: #727272;
+  --color--action-button-background-default: #121212;
+  --color--action-button-background-hovered: #D2691E;
+  --color--action-button-background-pressed: #A0522D;
+  --color--action-button-icon-default: #F5F5F5;
+  --color--action-button-icon-hovered: #121212;
+  --color--action-button-icon-pressed: #222222;
+  --color--toggle-button-icon-default: #D2691E;
+  --color--toggle-button-icon-hovered: #121212;
+  --color--toggle-button-icon-pressed: #424242;
+  --color--toggle-button-foreground-default: #F5F5F5;
+  --color--toggle-button-foreground-hovered: #F5F5F5;
+  --color--toggle-button-foreground-pressed: #D5D5D5;
+  --color--toggle-button-background-default: #424242;
+  --color--toggle-button-background-hovered: #D2691E;
+  --color--toggle-button-background-pressed: #A0522D;
+  --color--icon-button-icon-default: #F5F5F5;
+  --color--icon-button-icon-hovered: #D2691E;
+  --color--icon-button-icon-pressed: #A0522D;
+  --color--icon-button-background-text-default: #424242;
+  --color--icon-button-background-text-hovered: #D2691E;
+  --color--icon-button-background-text-pressed: #A0522D;
+  --color--icon-button-background-icon-default: #121212;
+  --color--icon-button-background-icon-hovered: #121212;
+  --color--icon-button-background-icon-pressed: #222222;
+}
+.app.theme--light #image {
+  background: #FFFFFF;
+  filter: invert(100%);
+}
+
+/* #endregion Themes *//*# sourceMappingURL=app.css.map */
